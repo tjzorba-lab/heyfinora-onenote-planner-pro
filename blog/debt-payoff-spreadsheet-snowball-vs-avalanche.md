@@ -294,7 +294,7 @@ The download includes a blank Excel version and a demo Excel version with exampl
 
 The Excel workbook is designed for Microsoft Excel 2019, Excel 2021, and Microsoft 365 on Windows and Mac. It is not designed for Google Sheets, Apple Numbers, or Excel Online. The PDF planner can be printed or used digitally with compatible PDF apps.
 
-**Explore the HEYFINORA Pro Debt Payoff Tracker:** [Insert your Etsy product listing link here]
+**[Explore the HEYFINORA Pro Debt Payoff Tracker on Etsy →](https://www.etsy.com/listing/4572250655/debt-payoff-tracker-snowball-avalanche)**
 
 The product is a planning and tracking tool. It does not guarantee a particular payoff result or replace advice from a qualified financial professional.
 
