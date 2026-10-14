@@ -142,6 +142,8 @@ The Consumer Financial Protection Bureau explains both approaches and their trad
 
 **A practical tip:** If you are unsure which method suits you, compare both using your actual balances, APRs, and planned payments. Review the estimated total interest, payoff timeline, and first debt paid off before choosing a strategy.
 
+![Snowball vs avalanche strategy comparison in Excel: total interest, debt-free date, first debt paid off and months to first win](images/snowball-vs-avalanche-strategy-comparison.webp){: loading="lazy" width="1400" height="1050"}
+
 A comparison is more useful than assuming one method will always produce the best result for everyone.
 
 ## Step 4: Calculate Your Monthly Debt Payoff Budget
@@ -168,7 +170,7 @@ Avoid setting an extra-payment target that leaves you unable to cover essentials
 
 One of the most useful features of a debt payoff calculator is an estimated debt-free date.
 
-![Debt payoff dashboard in Excel showing original debt, current balance, total paid, projected debt-free date and progress bar](images/debt-payoff-dashboard-debt-free-date.webp){: loading="lazy" width="1400" height="1050"}
+![Debt payoff calculator showing months to pay off, payoff date, total interest and an amortization schedule](images/debt-payoff-calculator-amortization.webp){: loading="lazy" width="1400" height="1050"}
 
 A projection uses your debt balances, interest rates, and planned payments to estimate how long repayment may take under the assumptions built into the calculation.
 
@@ -190,6 +192,8 @@ Update your tracker with actual payments and current balances instead of assumin
 A plan only remains useful when you compare it with what actually happens.
 
 After making a payment, record the amount and update the relevant balance. Where your information allows, distinguish the amount applied to principal from the amount applied to interest and fees.
+
+![Debt payment history log in Excel splitting each payment into interest and principal with the balance after payment](images/debt-payment-history-log.webp){: loading="lazy" width="1400" height="1050"}
 
 Review your progress monthly.
 
@@ -230,6 +234,8 @@ Side-by-side projections make it easier to compare estimated interest, payoff ti
 
 A payment plan helps you organize how much you intend to pay toward each debt every month.
 
+![Monthly debt payment plan showing minimum and extra payments per debt, with the extra going to the snowball target](images/monthly-debt-payment-planner.webp){: loading="lazy" width="1400" height="1050"}
+
 ### 5. Payment history
 
 A payment log lets you compare planned payments with actual payments and track changes over time.
@@ -238,9 +244,13 @@ A payment log lets you compare planned payments with actual payments and track c
 
 A calculator can help you explore how different additional payment amounts may affect projected repayment time and interest.
 
+![Extra payment calculator comparing five extra monthly payment amounts with months and interest saved](images/extra-payment-calculator.webp){: loading="lazy" width="1400" height="1050"}
+
 ### 7. A dashboard
 
 Charts, summary figures, and progress indicators can make it easier to review your overall position without scanning every worksheet.
+
+![Debt payoff dashboard in Excel showing original debt, current balance, total paid, projected debt-free date and progress bar](images/debt-payoff-dashboard-debt-free-date.webp){: loading="lazy" width="1400" height="1050"}
 
 ![Auto-updating debt payoff charts: projected total debt, paid vs remaining, debt by account, and interest vs principal](images/debt-payoff-tracker-charts.webp){: loading="lazy" width="1400" height="1050"}
 
