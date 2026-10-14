@@ -216,6 +216,8 @@ Look for these useful features:
 
 A central place to record balances, APRs, and minimum payments without maintaining several separate lists.
 
+![Debt inventory spreadsheet in Excel listing credit cards, loans, medical debt and BNPL with balance, APR, minimum payment and status](images/debt-inventory-spreadsheet.webp){: loading="lazy" width="1400" height="1050"}
+
 ### 2. Snowball and avalanche ranking
 
 Automatic ranking can help you identify the next debt under either method without manually sorting the entire list.
