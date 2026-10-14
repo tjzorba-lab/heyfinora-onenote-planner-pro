@@ -168,6 +168,8 @@ Avoid setting an extra-payment target that leaves you unable to cover essentials
 
 One of the most useful features of a debt payoff calculator is an estimated debt-free date.
 
+![Debt payoff dashboard in Excel showing original debt, current balance, total paid, projected debt-free date and progress bar](images/debt-payoff-dashboard-debt-free-date.webp){: loading="lazy" width="1400" height="1050"}
+
 A projection uses your debt balances, interest rates, and planned payments to estimate how long repayment may take under the assumptions built into the calculation.
 
 A more detailed debt payoff spreadsheet may calculate:
@@ -238,6 +240,8 @@ A calculator can help you explore how different additional payment amounts may a
 
 Charts, summary figures, and progress indicators can make it easier to review your overall position without scanning every worksheet.
 
+![Auto-updating debt payoff charts: projected total debt, paid vs remaining, debt by account, and interest vs principal](images/debt-payoff-tracker-charts.webp){: loading="lazy" width="1400" height="1050"}
+
 ### 8. A printable planner
 
 Some people prefer to combine spreadsheet calculations with handwritten planning, monthly reflections, and visual milestones. A printable planner can complement a digital tracker without replacing its calculations.
@@ -254,15 +258,21 @@ An Excel spreadsheet and a printable planner can serve different purposes.
 
 You do not necessarily have to choose one or the other. Using both can give you a structured digital system alongside a paper-based routine.
 
+![HEYFINORA Pro Debt Payoff Tracker Excel dashboard on a laptop next to the printed debt payoff planner](images/excel-and-printable-debt-payoff-planner.webp){: loading="lazy" width="1400" height="1050"}
+
 For example, you could use Excel to compare snowball and avalanche projections, then use your printable monthly tracker to record your goals and reflect on your progress.
 
 ## A Complete Excel and Printable Debt Payoff System
 
 If you want a more structured approach than a basic debt list, the **HEYFINORA Pro Debt Payoff Tracker** combines a Microsoft Excel workbook with a printable debt payoff planner.
 
+![HEYFINORA Debt Payoff Tracker: Excel spreadsheet and 43-page printable planner PDF with snowball and avalanche tools](images/heyfinora-debt-payoff-tracker.webp){: loading="lazy" width="1400" height="1050"}
+
 The bundle is designed to help you organize debt information, compare repayment strategies, monitor payments, and review your progress.
 
 ### What is included?
+
+![What's included: blank and demo Excel trackers, A4 and US Letter printable planners, and the 17 Excel tabs](images/debt-payoff-tracker-whats-included.webp){: loading="lazy" width="1400" height="1050"}
 
 **The Excel workbook includes:**
 
