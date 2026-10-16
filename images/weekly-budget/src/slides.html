@@ -1,0 +1,358 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0F1B2D;--navy2:#1B2B45;--gold:#D4A84B;--gold2:#F3E3BC;--cream:#F7F2E8;--paper:#FFFDF8;--ink:#0F1B2D;--muted:#5E6878;--line:#E3DCCD;--blue:#3F7BE8;--blue2:#E6EEFC;--green:#1F9D63;--green2:#DDF3E8;--amber:#D98A10;--amber2:#FCEFD6;--red:#D64545;--red2:#FBE1E1}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#777;font-family:Inter,sans-serif;color:var(--ink)}
+.slide{width:2000px;height:1500px;position:relative;overflow:hidden;background:var(--cream);margin-bottom:30px;padding:80px 100px}
+.serif{font-family:'Playfair Display',Georgia,serif}
+.kick{font-size:30px;font-weight:800;letter-spacing:9px;color:var(--gold);text-transform:uppercase}
+h1{font-size:112px;line-height:1.02;font-weight:900;letter-spacing:-3px;margin-top:18px}
+h1 em{font-style:normal;color:var(--gold)}
+.sub{font-size:44px;color:var(--muted);margin-top:22px;font-weight:500;line-height:1.25}
+.sub b{color:var(--ink)}
+.foot{position:absolute;left:0;right:0;bottom:0;height:96px;background:var(--navy);color:#fff;display:flex;align-items:center;justify-content:space-between;padding:0 100px;font-size:30px;font-weight:700}
+.foot span{color:var(--gold);letter-spacing:6px}
+.card{background:#fff;border-radius:34px;box-shadow:0 30px 70px rgba(15,27,45,.16),0 0 0 2px var(--line)}
+/* spreadsheet-style table */
+.sheet{background:#fff;border-radius:30px;overflow:hidden;box-shadow:0 30px 70px rgba(15,27,45,.18),0 0 0 2px var(--line)}
+.sheet .tt{background:var(--navy);color:#fff;font-size:40px;font-weight:800;letter-spacing:3px;padding:30px 40px;display:flex;justify-content:space-between;align-items:center}
+.sheet .tt small{color:var(--gold);font-size:32px;letter-spacing:4px}
+table{border-collapse:collapse;width:100%}
+th{background:#EEF1F6;color:var(--navy);font-size:32px;font-weight:800;text-align:left;padding:28px 34px;letter-spacing:1px;text-transform:uppercase;border-bottom:3px solid var(--navy)}
+td{font-size:48px;font-weight:700;padding:34px 34px;border-bottom:2px solid #EDE8DD}
+tr:nth-child(even) td{background:#FBF8F1}
+td.num,th.num{text-align:right;font-variant-numeric:tabular-nums}
+.in{color:var(--blue)}
+.pill{display:inline-block;padding:12px 30px;border-radius:999px;font-size:38px;font-weight:800;white-space:nowrap}
+.g{background:var(--green2);color:var(--green)}.a{background:var(--amber2);color:var(--amber)}.r{background:var(--red2);color:var(--red)}.b{background:var(--blue2);color:var(--blue)}.n{background:#ECEEF2;color:#55606F}
+.bar{height:40px;border-radius:99px;background:#ECE6D8;overflow:hidden}
+.bar i{display:block;height:100%;border-radius:99px}
+.callouts{display:flex;gap:30px;margin-top:50px}
+.co{flex:1;background:var(--navy);color:#fff;border-radius:26px;padding:40px 40px;font-size:44px;font-weight:700;line-height:1.2;display:flex;gap:20px;align-items:center}
+.co .ic{font-size:64px;flex:none}
+.co b{color:var(--gold)}
+.big{font-size:100px;font-weight:900;letter-spacing:-2px;font-variant-numeric:tabular-nums}
+.lbl{font-size:32px;font-weight:800;letter-spacing:3px;color:var(--muted);text-transform:uppercase}
+.row{display:flex;gap:40px}
+table.tall td{padding-top:46px;padding-bottom:46px}
+.blob{position:absolute;border-radius:50%}
+</style></head><body>
+
+<!-- 1 COVER -->
+<section class="slide" id="s1" style="background:var(--navy);color:#fff">
+  <div class="blob" style="width:1100px;height:1100px;right:-300px;top:-250px;background:radial-gradient(circle,#24395C 0%,rgba(15,27,45,0) 70%)"></div>
+  <div style="position:relative;width:900px">
+    <div class="kick">HEYFINORA</div>
+    <h1 style="font-size:140px;color:#fff;margin-top:24px">Weekly<br>Budget<br>Planner</h1>
+    <div style="display:inline-block;margin-top:34px;background:var(--gold);color:var(--navy);font-size:52px;font-weight:900;letter-spacing:12px;padding:16px 40px;border-radius:16px">ULTIMATE</div>
+    <div style="font-size:54px;font-weight:600;margin-top:40px;line-height:1.25;color:#DCE3EE">Plan, track &amp; save<br><b style="color:var(--gold)">every single week.</b></div>
+  </div>
+  <!-- dashboard mock -->
+  <div class="card" style="position:absolute;right:80px;top:110px;width:960px;padding:44px;transform:rotate(2deg);color:var(--ink)">
+    <div style="font-size:28px;font-weight:900;letter-spacing:4px;margin-bottom:26px">BUDGET DASHBOARD</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:22px">
+      <div style="background:var(--green2);border-radius:20px;padding:24px 28px"><div class="lbl" style="font-size:22px">Income</div><div style="font-size:62px;font-weight:900;color:var(--green)">$2,050</div></div>
+      <div style="background:var(--red2);border-radius:20px;padding:24px 28px"><div class="lbl" style="font-size:22px">Expenses</div><div style="font-size:62px;font-weight:900;color:var(--red)">$825</div></div>
+      <div style="background:var(--blue2);border-radius:20px;padding:24px 28px"><div class="lbl" style="font-size:22px">Net Cash Flow</div><div style="font-size:62px;font-weight:900;color:var(--blue)">$1,125</div></div>
+      <div style="background:var(--gold2);border-radius:20px;padding:24px 28px"><div class="lbl" style="font-size:22px">Bills upcoming</div><div style="font-size:62px;font-weight:900;color:#9A7020">2</div></div>
+    </div>
+    <div style="display:flex;align-items:flex-end;gap:26px;height:250px;margin-top:34px;padding:0 10px;border-bottom:3px solid var(--line)">
+      <div style="flex:1;display:flex;gap:8px;align-items:flex-end;height:100%"><i style="flex:1;height:70%;background:var(--navy);border-radius:8px 8px 0 0"></i><i style="flex:1;height:48%;background:var(--gold);border-radius:8px 8px 0 0"></i></div>
+      <div style="flex:1;display:flex;gap:8px;align-items:flex-end;height:100%"><i style="flex:1;height:78%;background:var(--navy);border-radius:8px 8px 0 0"></i><i style="flex:1;height:52%;background:var(--gold);border-radius:8px 8px 0 0"></i></div>
+      <div style="flex:1;display:flex;gap:8px;align-items:flex-end;height:100%"><i style="flex:1;height:74%;background:var(--navy);border-radius:8px 8px 0 0"></i><i style="flex:1;height:44%;background:var(--gold);border-radius:8px 8px 0 0"></i></div>
+      <div style="flex:1;display:flex;gap:8px;align-items:flex-end;height:100%"><i style="flex:1;height:92%;background:var(--navy);border-radius:8px 8px 0 0"></i><i style="flex:1;height:40%;background:var(--gold);border-radius:8px 8px 0 0"></i></div>
+    </div>
+  </div>
+  <!-- printable page -->
+  <img src="pdfpages/p-04.png" style="position:absolute;right:780px;top:760px;width:470px;transform:rotate(-6deg);border-radius:10px;box-shadow:0 30px 60px rgba(0,0,0,.45)">
+  <div style="position:absolute;left:100px;bottom:80px;display:flex;flex-direction:column;align-items:flex-start;gap:22px">
+    <div class="pill" style="background:#fff;color:var(--navy);font-size:46px;padding:22px 44px">📊 Excel</div>
+    <div class="pill" style="background:#fff;color:var(--navy);font-size:46px;padding:22px 44px">🟩 Google Sheets</div>
+    <div class="pill" style="background:var(--gold);color:var(--navy);font-size:46px;padding:22px 44px">🖨️ Printable PDF</div>
+  </div>
+</section>
+
+<!-- 2 WHAT'S INCLUDED -->
+<section class="slide" id="s2">
+  <div style="text-align:center">
+    <div class="kick">What you get</div>
+    <h1>Everything in <em>one</em> bundle</h1>
+  </div>
+  <div class="row" style="margin-top:56px;gap:44px;height:1010px">
+    <div class="card" style="flex:1.3;padding:56px 60px">
+      <div style="display:flex;align-items:center;gap:26px"><div style="font-size:110px">📊</div><div><div style="font-size:84px;font-weight:900">16 Tabs</div><div style="font-size:40px;color:var(--muted);font-weight:600">Excel + Google Sheets</div></div></div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:26px 30px;margin-top:44px;font-size:40px;font-weight:700">
+        <div>✅ Dashboard</div><div>✅ Weekly Budget</div><div>✅ Transactions</div><div>✅ Income Tracker</div><div>✅ Bills &amp; Subs</div><div>✅ Category Budgets</div><div>✅ Cash Flow</div><div>✅ Savings Goals</div><div>✅ Debt Tracker</div><div>✅ Weekly Review</div><div>✅ Spending Analytics</div><div>✅ No-Spend Challenge</div><div>✅ Annual Summary</div><div>✅ Settings &amp; more</div>
+      </div>
+    </div>
+    <div class="card" style="flex:1;padding:56px 60px;background:var(--navy);color:#fff">
+      <div style="display:flex;align-items:center;gap:26px"><div style="font-size:110px">🖨️</div><div><div style="font-size:84px;font-weight:900">16 Pages</div><div style="font-size:40px;color:var(--gold);font-weight:700">Printable PDF</div></div></div>
+      <div style="display:grid;grid-template-columns:1fr;gap:26px;margin-top:44px;font-size:40px;font-weight:700">
+        <div>⭐ Weekly Budget Overview</div><div>⭐ Transaction Log</div><div>⭐ Bills &amp; Savings Goals</div><div>⭐ Debt &amp; Cash Flow</div><div>⭐ Weekly Review</div><div>⭐ No-Spend Challenge</div><div>⭐ Annual Summary</div><div>⭐ Spending Analysis</div><div>⭐ Notes &amp; Categories</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>HEYFINORA</span>Instant digital download</div>
+</section>
+
+<!-- 3 HOW IT WORKS -->
+<section class="slide" id="s3">
+  <div class="kick">How it works</div>
+  <h1>Start in <em>4 easy steps</em></h1>
+  <div style="display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:440px;gap:40px;margin-top:60px">
+    <div class="card" style="padding:46px 50px;display:flex;gap:36px;align-items:center"><div style="font-size:190px;font-weight:900;color:var(--gold);line-height:1">1</div><div><div style="font-size:64px;font-weight:900;line-height:1.05">Set your year</div><div style="font-size:42px;color:var(--muted);font-weight:600;margin-top:18px;line-height:1.25">Currency, week start (Mon/Sun) &amp; budget alerts</div></div></div>
+    <div class="card" style="padding:46px 50px;display:flex;gap:36px;align-items:center"><div style="font-size:190px;font-weight:900;color:var(--gold);line-height:1">2</div><div><div style="font-size:64px;font-weight:900;line-height:1.05">Log transactions</div><div style="font-size:42px;color:var(--muted);font-weight:600;margin-top:18px;line-height:1.25">One row per income or expense — use the dropdowns</div></div></div>
+    <div class="card" style="padding:46px 50px;display:flex;gap:36px;align-items:center"><div style="font-size:190px;font-weight:900;color:var(--gold);line-height:1">3</div><div><div style="font-size:64px;font-weight:900;line-height:1.05">Set weekly limits</div><div style="font-size:42px;color:var(--muted);font-weight:600;margin-top:18px;line-height:1.25">Plan how much each category can spend</div></div></div>
+    <div class="card" style="padding:46px 50px;display:flex;gap:36px;align-items:center;background:var(--navy);color:#fff"><div style="font-size:190px;font-weight:900;color:var(--gold);line-height:1">4</div><div><div style="font-size:64px;font-weight:900;line-height:1.05">Watch it update</div><div style="font-size:42px;color:#C9D2E0;font-weight:600;margin-top:18px;line-height:1.25">Dashboard, charts &amp; totals calculate for you</div></div></div>
+  </div>
+  <div class="foot"><span>HEYFINORA</span>Blue cells = your input · everything else is automatic</div>
+</section>
+
+<!-- 4 DASHBOARD -->
+<section class="slide" id="s4">
+  <div class="kick">Budget Dashboard</div>
+  <h1>Your money <em>at a glance</em></h1>
+  <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:30px;margin-top:56px">
+    <div class="card" style="padding:38px 36px;border-top:14px solid var(--green)"><div class="lbl">Total Income</div><div class="big" style="color:var(--green);margin-top:12px">$2,050</div></div>
+    <div class="card" style="padding:38px 36px;border-top:14px solid var(--red)"><div class="lbl">Total Expenses</div><div class="big" style="color:var(--red);margin-top:12px">$825</div></div>
+    <div class="card" style="padding:38px 36px;border-top:14px solid var(--blue)"><div class="lbl">Net Cash Flow</div><div class="big" style="color:var(--blue);margin-top:12px">$1,125</div></div>
+    <div class="card" style="padding:38px 36px;border-top:14px solid var(--gold)"><div class="lbl">Goal Progress</div><div class="big" style="color:#A57A1E;margin-top:12px">17%</div></div>
+  </div>
+  <div class="card" style="margin-top:40px;padding:40px 50px">
+    <div style="display:flex;justify-content:space-between;align-items:center"><div style="font-size:50px;font-weight:900">Monthly Income vs Expenses</div><div style="font-size:38px;font-weight:700;display:flex;gap:30px"><span><i style="display:inline-block;width:26px;height:26px;background:var(--navy);border-radius:6px;vertical-align:-3px"></i> Income</span><span><i style="display:inline-block;width:26px;height:26px;background:var(--gold);border-radius:6px;vertical-align:-3px"></i> Expenses</span></div></div>
+    <div id="dashbars" style="display:flex;align-items:flex-end;gap:40px;height:560px;margin-top:30px;border-bottom:3px solid var(--line)"></div>
+    <div id="dashlbl" style="display:flex;gap:40px;margin-top:14px;font-size:40px;font-weight:800;color:var(--muted)"></div>
+  </div>
+  <div class="foot"><span>HEYFINORA</span>Updates automatically from your transactions</div>
+</section>
+
+<!-- 5 TRANSACTIONS -->
+<section class="slide" id="s5">
+  <div class="kick">Transaction Tracker</div>
+  <h1>Log every dollar <em>in seconds</em></h1>
+  <div class="sheet" style="margin-top:54px">
+    <div class="tt">TRANSACTIONS <small>500-ROW LEDGER</small></div>
+    <table>
+      <tr><th>Date</th><th>Description</th><th>Category</th><th class="num">Amount</th><th>Need / Want</th></tr>
+      <tr><td>Oct 12</td><td>Paycheck</td><td><span class="pill g">Income</span></td><td class="num" style="color:var(--green)">+$1,800</td><td>—</td></tr>
+      <tr><td>Oct 12</td><td>Rent</td><td>Housing</td><td class="num">$650</td><td><span class="pill b">Need</span></td></tr>
+      <tr><td>Oct 13</td><td>Groceries</td><td>Groceries</td><td class="num">$85</td><td><span class="pill b">Need</span></td></tr>
+      <tr><td>Oct 14</td><td>Coffee with friend</td><td>Dining Out</td><td class="num">$18</td><td><span class="pill a">Want</span></td></tr>
+      <tr><td>Oct 15</td><td>Electric bill</td><td>Utilities</td><td class="num">$72</td><td><span class="pill b">Need</span></td></tr>
+    </table>
+  </div>
+  <div class="callouts">
+    <div class="co"><span class="ic">🔽</span><span>Dropdowns for <b> type &amp; category</b></span></div>
+    <div class="co"><span class="ic">📅</span><span>Week, month &amp; year <b> auto-filled</b></span></div>
+  </div>
+</section>
+
+<!-- 6 WEEKLY BUDGET -->
+<section class="slide" id="s6">
+  <div class="kick">Weekly Budget</div>
+  <h1>Planned vs Actual, <em>every week</em></h1>
+  <div class="sheet" style="margin-top:54px">
+    <div class="tt">WEEK OF OCT 12 <small>52 WEEKS · 15 CATEGORIES</small></div>
+    <table>
+      <tr><th>Category</th><th class="num">Planned</th><th class="num">Actual</th><th style="width:330px">Used</th><th>Status</th></tr>
+      <tr><td>Groceries</td><td class="num">$120</td><td class="num">$85</td><td><div class="bar"><i style="width:71%;background:var(--green)"></i></div></td><td><span class="pill g">On track</span></td></tr>
+      <tr><td>Utilities</td><td class="num">$80</td><td class="num">$72</td><td><div class="bar"><i style="width:90%;background:var(--amber)"></i></div></td><td><span class="pill a">Near limit</span></td></tr>
+      <tr><td>Dining Out</td><td class="num">$15</td><td class="num">$18</td><td><div class="bar"><i style="width:100%;background:var(--red)"></i></div></td><td><span class="pill r">Over budget</span></td></tr>
+      <tr><td>Transportation</td><td class="num">$50</td><td class="num">$20</td><td><div class="bar"><i style="width:40%;background:var(--green)"></i></div></td><td><span class="pill g">On track</span></td></tr>
+    </table>
+  </div>
+  <div class="callouts">
+    <div class="co"><span class="ic">🚦</span><span>Status changes <b> automatically</b></span></div>
+    <div class="co"><span class="ic">⚠️</span><span>Alert at <b> 90%</b> — you choose</span></div>
+  </div>
+</section>
+
+<!-- 7 BILLS -->
+<section class="slide" id="s7">
+  <div class="kick">Bills &amp; Subscriptions</div>
+  <h1>Always know <em>what's due</em></h1>
+  <div class="sheet" style="margin-top:54px">
+    <div class="tt">BILLS &amp; SUBS <small>TRACK UP TO 100</small></div>
+    <table class="tall">
+      <tr><th>Bill</th><th class="num">Amount</th><th>Due</th><th>Status</th><th>Reminder</th></tr>
+      <tr><td>Rent</td><td class="num">$650</td><td>Nov 1</td><td><span class="pill b">Upcoming</span></td><td style="font-size:40px;color:var(--muted)">Scheduled</td></tr>
+      <tr><td>Electricity</td><td class="num">$72</td><td>Oct 21</td><td><span class="pill b">Upcoming</span></td><td style="font-size:40px;color:var(--amber);font-weight:800">Due within 7 days</td></tr>
+      <tr><td>Streaming</td><td class="num">$15</td><td>Oct 28</td><td><span class="pill g">Paid ✓</span></td><td style="font-size:40px;color:var(--muted)">—</td></tr>
+      <tr><td>Phone</td><td class="num">$40</td><td>Oct 10</td><td><span class="pill r">Overdue</span></td><td style="font-size:40px;color:var(--red);font-weight:800">Past due — review</td></tr>
+    </table>
+  </div>
+  <div class="callouts">
+    <div class="co"><span class="ic">⏰</span><span>Status updates <b> from the due date</b></span></div>
+    <div class="co"><span class="ic">🔁</span><span>Weekly · Monthly · <b> Yearly</b></span></div>
+  </div>
+  <div class="foot"><span>HEYFINORA</span>Paid · Upcoming · Overdue — at a glance</div>
+</section>
+
+<!-- 8 SAVINGS -->
+<section class="slide" id="s8">
+  <div class="kick">Savings Goals</div>
+  <h1>Watch your <em>savings grow</em></h1>
+  <div style="display:flex;flex-direction:column;gap:40px;margin-top:60px">
+    <div class="card" style="padding:58px 56px;display:flex;align-items:center;gap:50px">
+      <div style="font-size:120px">🛟</div>
+      <div style="flex:1"><div style="display:flex;justify-content:space-between;font-size:58px;font-weight:900"><span>Emergency Fund</span><span>$500 <span style="color:var(--muted);font-weight:700">/ $3,000</span></span></div><div class="bar" style="height:60px;margin-top:26px"><i style="width:17%;background:var(--green)"></i></div></div>
+      <div style="text-align:center;width:300px"><div class="lbl" style="font-size:30px">Save / week</div><div style="font-size:92px;font-weight:900;color:var(--green)">$68</div></div>
+    </div>
+    <div class="card" style="padding:58px 56px;display:flex;align-items:center;gap:50px">
+      <div style="font-size:120px">💻</div>
+      <div style="flex:1"><div style="display:flex;justify-content:space-between;font-size:58px;font-weight:900"><span>New Laptop</span><span>$600 <span style="color:var(--muted);font-weight:700">/ $1,000</span></span></div><div class="bar" style="height:60px;margin-top:26px"><i style="width:60%;background:var(--blue)"></i></div></div>
+      <div style="text-align:center;width:300px"><div class="lbl" style="font-size:30px">Save / week</div><div style="font-size:92px;font-weight:900;color:var(--blue)">$26</div></div>
+    </div>
+    <div class="card" style="padding:58px 56px;display:flex;align-items:center;gap:50px">
+      <div style="font-size:120px">🏝️</div>
+      <div style="flex:1"><div style="display:flex;justify-content:space-between;font-size:58px;font-weight:900"><span>Holiday</span><span>$150 <span style="color:var(--muted);font-weight:700">/ $1,200</span></span></div><div class="bar" style="height:60px;margin-top:26px"><i style="width:13%;background:var(--gold)"></i></div></div>
+      <div style="text-align:center;width:300px"><div class="lbl" style="font-size:30px">Save / week</div><div style="font-size:92px;font-weight:900;color:#A57A1E">$25</div></div>
+    </div>
+  </div>
+  <div class="foot"><span>HEYFINORA</span>Weekly amount needed — calculated for you</div>
+</section>
+
+<!-- 9 DEBT -->
+<section class="slide" id="s9">
+  <div class="kick">Debt Tracker</div>
+  <h1>Pay it off, <em>step by step</em></h1>
+  <div class="row" style="margin-top:60px">
+    <div class="card" style="flex:1;padding:50px">
+      <div style="font-size:64px;font-weight:900;line-height:1.05">💳 Credit Card</div>
+      <div style="display:flex;justify-content:center;margin:36px 0 40px">
+        <div style="width:500px;height:500px;border-radius:50%;background:conic-gradient(var(--green) 0 21%,#ECE6D8 21% 100%);display:flex;align-items:center;justify-content:center"><div style="width:360px;height:360px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center"><div style="font-size:120px;font-weight:900;color:var(--green)">21%</div><div class="lbl" style="font-size:32px">paid off</div></div></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:46px;font-weight:700"><span style="color:var(--muted)">Balance</span><span><s style="color:var(--muted)">$1,200</s> → <b>$950</b></span></div>
+      <div style="display:flex;justify-content:space-between;font-size:46px;font-weight:700;margin-top:20px"><span style="color:var(--muted)">Payment</span><span>$50 + <b style="color:var(--green)">$25 extra</b></span></div>
+    </div>
+    <div class="card" style="flex:1;padding:50px">
+      <div style="font-size:64px;font-weight:900;line-height:1.05">🏦 Personal Loan</div>
+      <div style="display:flex;justify-content:center;margin:36px 0 40px">
+        <div style="width:500px;height:500px;border-radius:50%;background:conic-gradient(var(--blue) 0 17%,#ECE6D8 17% 100%);display:flex;align-items:center;justify-content:center"><div style="width:360px;height:360px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center"><div style="font-size:120px;font-weight:900;color:var(--blue)">17%</div><div class="lbl" style="font-size:32px">paid off</div></div></div>
+      </div>
+      <div style="display:flex;justify-content:space-between;font-size:46px;font-weight:700"><span style="color:var(--muted)">Balance</span><span><s style="color:var(--muted)">$3,000</s> → <b>$2,500</b></span></div>
+      <div style="display:flex;justify-content:space-between;font-size:46px;font-weight:700;margin-top:20px"><span style="color:var(--muted)">Payment</span><span>$120 / month</span></div>
+    </div>
+  </div>
+  <div class="foot"><span>HEYFINORA</span>Payoff progress updates automatically</div>
+</section>
+
+<!-- 10 CASH FLOW -->
+<section class="slide" id="s10">
+  <div class="kick">Cash Flow</div>
+  <h1>Money in. Money out. <em>Clear.</em></h1>
+  <div class="sheet" style="margin-top:54px">
+    <div class="tt">WEEKLY CASH FLOW <small>52 WEEKS</small></div>
+    <table class="tall">
+      <tr><th>Week</th><th class="num">Opening</th><th class="num">Money In</th><th class="num">Money Out</th><th class="num">Savings</th><th class="num">Closing</th></tr>
+      <tr><td>Oct 5</td><td class="num">$400</td><td class="num" style="color:var(--green)">+$900</td><td class="num" style="color:var(--red)">−$610</td><td class="num">$50</td><td class="num"><b>$640</b></td></tr>
+      <tr><td>Oct 12</td><td class="num">$640</td><td class="num" style="color:var(--green)">+$2,050</td><td class="num" style="color:var(--red)">−$825</td><td class="num">$100</td><td class="num"><b>$1,765</b></td></tr>
+      <tr><td>Oct 19</td><td class="num">$1,765</td><td class="num" style="color:var(--green)">+$300</td><td class="num" style="color:var(--red)">−$540</td><td class="num">$75</td><td class="num"><b>$1,450</b></td></tr>
+      <tr><td>Oct 26</td><td class="num">$1,450</td><td class="num" style="color:var(--green)">+$900</td><td class="num" style="color:var(--red)">−$480</td><td class="num">$100</td><td class="num"><b>$1,770</b></td></tr>
+    </table>
+  </div>
+  <div class="callouts">
+    <div class="co"><span class="ic">➡️</span><span>Closing balance <b> carries forward</b></span></div>
+    <div class="co"><span class="ic">⚡</span><span>Filled from your <b> transactions</b></span></div>
+  </div>
+</section>
+
+<!-- 11 SPENDING ANALYTICS -->
+<section class="slide" id="s11">
+  <div class="kick">Spending Analytics</div>
+  <h1>See where it <em>really goes</em></h1>
+  <div class="row" style="margin-top:56px;align-items:stretch;height:1010px">
+    <div class="card" style="width:760px;padding:50px;display:flex;flex-direction:column;align-items:center">
+      <div style="font-size:54px;font-weight:900;align-self:flex-start">Needs vs Wants</div>
+      <div style="width:560px;height:560px;border-radius:50%;margin-top:40px;background:conic-gradient(var(--navy) 0 72%,var(--gold) 72% 100%);display:flex;align-items:center;justify-content:center"><div style="width:350px;height:350px;border-radius:50%;background:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center"><div style="font-size:120px;font-weight:900">72%</div><div class="lbl" style="font-size:26px">Needs</div></div></div>
+      <div style="display:flex;gap:40px;margin-top:44px;font-size:42px;font-weight:800"><span><i style="display:inline-block;width:30px;height:30px;background:var(--navy);border-radius:7px;vertical-align:-4px"></i> Needs 72%</span><span><i style="display:inline-block;width:30px;height:30px;background:var(--gold);border-radius:7px;vertical-align:-4px"></i> Wants 28%</span></div>
+    </div>
+    <div class="card" style="flex:1;padding:50px">
+      <div style="font-size:54px;font-weight:900">Top categories</div>
+      <div id="cats" style="margin-top:40px;display:flex;flex-direction:column;gap:44px"></div>
+    </div>
+  </div>
+  <div class="foot"><span>HEYFINORA</span>Share of spending for all 15 categories</div>
+</section>
+
+<!-- 12 ANNUAL -->
+<section class="slide" id="s12">
+  <div class="kick">Annual Summary</div>
+  <h1>Your whole year <em>on one page</em></h1>
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:30px;margin-top:54px">
+    <div class="card" style="padding:34px 40px"><div class="lbl">Year Income</div><div class="big" style="color:var(--green)">$38,400</div></div>
+    <div class="card" style="padding:34px 40px"><div class="lbl">Year Expenses</div><div class="big" style="color:var(--red)">$29,750</div></div>
+    <div class="card" style="padding:34px 40px;background:var(--navy);color:#fff"><div class="lbl" style="color:var(--gold)">Year Saved</div><div class="big">$4,200</div></div>
+  </div>
+  <div class="card" style="margin-top:36px;padding:40px 50px">
+    <div style="font-size:50px;font-weight:900">12-month roll-up</div>
+    <div id="yearbars" style="display:flex;align-items:flex-end;gap:26px;height:560px;margin-top:26px;border-bottom:3px solid var(--line)"></div>
+    <div id="yearlbl" style="display:flex;gap:26px;margin-top:14px;font-size:38px;font-weight:800;color:var(--muted)"></div>
+  </div>
+  <div class="foot"><span>HEYFINORA</span>Monthly totals calculated automatically</div>
+</section>
+
+<!-- 13 NO-SPEND -->
+<section class="slide" id="s13">
+  <div class="kick">No-Spend Challenge</div>
+  <h1>Take the <em>No-Spend</em> challenge</h1>
+  <div class="row" style="margin-top:56px;align-items:stretch;height:1010px">
+    <div class="card" style="flex:1;padding:44px">
+      <div style="display:grid;grid-template-columns:repeat(7,1fr);gap:14px;font-size:34px;font-weight:800;color:var(--muted);text-align:center;margin-bottom:18px"><div>MON</div><div>TUE</div><div>WED</div><div>THU</div><div>FRI</div><div>SAT</div><div>SUN</div></div>
+      <div id="cal" style="display:grid;grid-template-columns:repeat(7,1fr);gap:14px"></div>
+    </div>
+    <div style="width:560px;display:flex;flex-direction:column;gap:30px">
+      <div class="card" style="flex:1;padding:44px;background:var(--navy);color:#fff;display:flex;flex-direction:column;justify-content:center"><div class="lbl" style="color:var(--gold)">Success rate</div><div style="font-size:190px;font-weight:900;line-height:1.05">80%</div></div>
+      <div class="card" style="flex:1;padding:44px;display:flex;flex-direction:column;justify-content:center"><div class="lbl">Successful days</div><div style="font-size:110px;font-weight:900;color:var(--green);line-height:1.1">16 <span style="font-size:70px;color:var(--muted)">/ 20</span></div></div>
+    </div>
+  </div>
+  <div class="foot"><span>HEYFINORA</span>Mark a day ✓ — the score counts itself</div>
+</section>
+
+<!-- 14 WEEKLY REVIEW -->
+<section class="slide" id="s14">
+  <div class="kick">Weekly Review</div>
+  <h1>5 minutes. <em>Better every week.</em></h1>
+  <div style="display:flex;flex-direction:column;gap:30px;margin-top:56px">
+    <div class="card" style="padding:30px 50px;display:flex;align-items:center;gap:44px"><div style="width:130px;height:130px;flex:none;border-radius:50%;background:var(--gold);color:var(--navy);font-size:72px;font-weight:900;display:flex;align-items:center;justify-content:center">1</div><div style="font-size:66px;font-weight:800">What went well with my money?</div></div>
+    <div class="card" style="padding:30px 50px;display:flex;align-items:center;gap:44px"><div style="width:130px;height:130px;flex:none;border-radius:50%;background:var(--gold);color:var(--navy);font-size:72px;font-weight:900;display:flex;align-items:center;justify-content:center">2</div><div style="font-size:66px;font-weight:800">Where did I overspend?</div></div>
+    <div class="card" style="padding:30px 50px;display:flex;align-items:center;gap:44px"><div style="width:130px;height:130px;flex:none;border-radius:50%;background:var(--gold);color:var(--navy);font-size:72px;font-weight:900;display:flex;align-items:center;justify-content:center">3</div><div style="font-size:66px;font-weight:800">What can I reduce next week?</div></div>
+    <div class="card" style="padding:30px 50px;display:flex;align-items:center;gap:44px"><div style="width:130px;height:130px;flex:none;border-radius:50%;background:var(--gold);color:var(--navy);font-size:72px;font-weight:900;display:flex;align-items:center;justify-content:center">4</div><div style="font-size:66px;font-weight:800">What win am I proud of?</div></div>
+    <div class="card" style="padding:30px 50px;display:flex;align-items:center;gap:44px;background:var(--navy);color:#fff"><div style="width:130px;height:130px;flex:none;border-radius:50%;background:var(--gold);color:var(--navy);font-size:72px;font-weight:900;display:flex;align-items:center;justify-content:center">5</div><div style="font-size:66px;font-weight:800">My top priority for next week?</div></div>
+  </div>
+</section>
+
+<!-- 15 PRINTABLE -->
+<section class="slide" id="s15" style="background:var(--navy);color:#fff">
+  <div class="kick">Printable PDF</div>
+  <h1 style="color:#fff">Love paper? <em>Print it.</em></h1>
+  <div class="sub" style="color:#C9D2E0;font-size:52px">16 ready-to-print pages · <b style="color:#fff">A4 size</b></div>
+  <div style="position:absolute;left:0;right:0;top:400px;height:1100px">
+    <img src="pdfpages/p-06.png" style="position:absolute;left:40px;top:150px;width:640px;transform:rotate(-8deg);border-radius:12px;box-shadow:0 30px 60px rgba(0,0,0,.5)">
+    <img src="pdfpages/p-09.png" style="position:absolute;left:1320px;top:150px;width:640px;transform:rotate(8deg);border-radius:12px;box-shadow:0 30px 60px rgba(0,0,0,.5)">
+    <img src="pdfpages/p-08.png" style="position:absolute;left:430px;top:60px;width:660px;transform:rotate(-3deg);border-radius:12px;box-shadow:0 30px 60px rgba(0,0,0,.5)">
+    <img src="pdfpages/p-04.png" style="position:absolute;left:910px;top:60px;width:660px;transform:rotate(3deg);border-radius:12px;box-shadow:0 30px 60px rgba(0,0,0,.5)">
+  </div>
+</section>
+
+<script>
+// dashboard bars (example data)
+const m=['Jul','Aug','Sep','Oct','Nov','Dec'],inc=[1900,2100,1950,2050,2200,2300],exp=[1300,1450,1200,825,1100,1600];
+const db=document.getElementById('dashbars'),dl=document.getElementById('dashlbl');
+m.forEach((x,i)=>{db.insertAdjacentHTML('beforeend',`<div style="flex:1;display:flex;gap:12px;align-items:flex-end;height:100%"><i style="flex:1;height:${inc[i]/2400*100}%;background:var(--navy);border-radius:10px 10px 0 0"></i><i style="flex:1;height:${exp[i]/2400*100}%;background:var(--gold);border-radius:10px 10px 0 0"></i></div>`);dl.insertAdjacentHTML('beforeend',`<div style="flex:1;text-align:center">${x}</div>`)});
+// categories
+const cats=[['Housing',41,'var(--navy)'],['Groceries',17,'var(--blue)'],['Transportation',12,'var(--green)'],['Dining Out',9,'var(--gold)'],['Shopping',7,'var(--red)']];
+const c=document.getElementById('cats');
+cats.forEach(([n,p,col])=>c.insertAdjacentHTML('beforeend',`<div><div style="display:flex;justify-content:space-between;font-size:50px;font-weight:800"><span>${n}</span><span>${p}%</span></div><div class="bar" style="height:48px;margin-top:14px"><i style="width:${p*2.2}%;background:${col}"></i></div></div>`));
+// year bars
+const ym=['J','F','M','A','M','J','J','A','S','O','N','D'],yi=[3000,3100,3150,3050,3200,3300,3100,3250,3200,3350,3200,3450],ye=[2500,2300,2600,2400,2450,2700,2350,2500,2200,2300,2450,2900];
+const yb=document.getElementById('yearbars'),yl=document.getElementById('yearlbl');
+ym.forEach((x,i)=>{yb.insertAdjacentHTML('beforeend',`<div style="flex:1;display:flex;gap:6px;align-items:flex-end;height:100%"><i style="flex:1;height:${yi[i]/3600*100}%;background:var(--navy);border-radius:8px 8px 0 0"></i><i style="flex:1;height:${ye[i]/3600*100}%;background:var(--gold);border-radius:8px 8px 0 0"></i></div>`);yl.insertAdjacentHTML('beforeend',`<div style="flex:1;text-align:center">${x}</div>`)});
+// calendar: 4 weeks (28 days), first 20 = challenge days
+const cal=document.getElementById('cal');const fail=new Set([4,9,13,17]);
+for(let d=1;d<=28;d++){let st,tx;if(d>20){st='background:#F3EFE6;color:#B9B2A3';tx='&nbsp;'}else if(fail.has(d)){st='background:var(--red2);color:var(--red)';tx='✕'}else{st='background:var(--green2);color:var(--green)';tx='✓'}
+cal.insertAdjacentHTML('beforeend',`<div style="height:205px;border-radius:22px;${st};display:flex;flex-direction:column;align-items:center;justify-content:center;font-weight:900"><div style="font-size:36px;opacity:.75">${d}</div><div style="font-size:84px;line-height:1">${tx}</div></div>`)}
+</script>
+</body></html>
