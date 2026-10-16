@@ -14,6 +14,8 @@ Every entry is under 250 characters and has no double quotes, which Etsy can rej
 | 6 | 06-whats-included.jpg | What is included with the digital Christmas invitation: a PDF with the template link, an editable 5 x 7 inch invitation, step-by-step instructions, and the option to print or send it digitally |
 | 7 | 07-how-it-works.jpg | Three steps to use the Christmas invite template: buy and download the PDF, open the template link in Canva, then edit and print or send. Digital download only, no physical item shipped |
 | 8 | 08-why-buy.jpg | Six benefits of this holiday party invitation template in large text with gold icons on dark green: instant editing, any device, print or send by text, quick and easy, festive red green and gold, shop support |
+| 9 | 09-pdf-download.jpg | Two pages of the instant download PDF for the Christmas invitation template: a clickable button to open the template, easy editing steps, plus printing and sharing tips |
+| 10 | 10-pdf-inside.jpg | Instant download PDF page with a red button to open the editable Christmas party invitation template, listed with what is inside: clickable template link, step-by-step guide, printing and sharing tips |
 
 ## Suggested listing title (under 140 characters)
 
