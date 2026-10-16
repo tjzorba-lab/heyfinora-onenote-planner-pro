@@ -13,7 +13,7 @@ Every entry is under 250 characters and has no double quotes, which Etsy can rej
 | 5 | 05-what-you-can-edit.jpg | Christmas invitation template with labels showing what you can edit: all text and wording, fonts and colors, date, time and address, RSVP details, elements, and your own photo or logo |
 | 6 | 06-whats-included.jpg | What is included with the digital Christmas invitation: a PDF with the template link, an editable 5 x 7 inch invitation, step-by-step instructions, and the option to print or send it digitally |
 | 7 | 07-how-it-works.jpg | Three steps to use the Christmas invite template: buy and download the PDF, open the template link in Canva, then edit and print or send. Digital download only, no physical item shipped |
-| 8 | 08-why-buy.jpg | Six benefits of this holiday party invitation template with gold icons on dark green: instant download, edit on any device, print or send by text, ready in minutes, festive red green and gold design, friendly support |
+| 8 | 08-why-buy.jpg | Six benefits of this holiday party invitation template in large text with gold icons on dark green: instant editing, any device, print or send by text, quick and easy, festive red green and gold, shop support |
 
 ## Suggested listing title (under 140 characters)
 
