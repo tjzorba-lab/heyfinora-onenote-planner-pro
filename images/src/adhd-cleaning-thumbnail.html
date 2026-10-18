@@ -1,0 +1,127 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&family=Inter:wght@500;600;700;800&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#14284A;--navy2:#22406E;--gold:#F2B63A;--gold2:#FBD77A;--cream:#FAF6EF;--line:#E6E1D8;--muted:#5B6476;--blue:#A9C4E8;--xl:#107C41}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#777;font-family:Inter,sans-serif;color:var(--navy)}
+#thumb{width:2000px;height:1500px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 15%,#FFFFFF,var(--cream) 55%,#EFE6D6)}
+.top{position:absolute;left:0;right:0;top:24px;text-align:center}
+.brand{display:inline-flex;align-items:center;gap:20px;font-family:Poppins;font-weight:700;font-size:32px;letter-spacing:12px}
+.brand:before,.brand:after{content:"";width:80px;height:3px;background:var(--gold)}
+.slog{font-family:Poppins;font-weight:700;font-size:28px;letter-spacing:6px;color:var(--navy2);margin-top:2px}
+.slog b{color:var(--gold);margin:0 12px}
+.band{display:inline-block;margin-top:14px;background:var(--navy);color:#fff;font-family:Poppins;font-weight:900;font-size:118px;line-height:1;padding:12px 60px 18px;border-radius:80px 30px 80px 30px;transform:rotate(-1.5deg);box-shadow:0 14px 30px rgba(20,40,74,.3)}
+.pl{font-family:Poppins;font-weight:900;font-size:130px;line-height:1;color:var(--navy);margin-top:4px;letter-spacing:2px}
+.pills{display:flex;justify-content:center;gap:16px;margin-top:10px}
+.pills span{font-family:Poppins;font-weight:800;font-size:40px;padding:8px 34px;border-radius:999px}
+.pg{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--navy)}
+.px{background:var(--xl);color:#fff;display:flex;align-items:center;gap:12px}
+.px i{font-style:normal;background:#fff;color:var(--xl);width:44px;height:44px;border-radius:9px;display:grid;place-items:center;font-family:Inter;font-weight:900;font-size:28px}
+.script{position:absolute;font-family:Caveat;font-weight:700;color:var(--navy);line-height:.9}
+/* ribbon */
+.rib{position:absolute;right:40px;top:0;width:290px;height:350px;background:var(--navy);color:#fff;text-align:center;padding-top:26px;clip-path:polygon(0 0,100% 0,100% 100%,50% 88%,0 100%);font-family:Poppins}
+.rib .d{font-size:50px}.rib b{display:block;font-size:34px;font-weight:800;line-height:1.05;margin-top:4px}
+.rib hr{border:0;height:3px;background:var(--gold);width:180px;margin:16px auto}
+.rib small{display:block;font-size:26px;font-weight:700;line-height:1.3}.rib small em{font-style:normal;color:#5FE08F}
+.badge17{position:absolute;right:60px;top:368px;width:260px;height:170px;background:var(--gold);border-radius:24px 60px 24px 60px;transform:rotate(-6deg);display:grid;place-items:center;text-align:center;color:var(--navy);font-family:Poppins;box-shadow:0 14px 30px rgba(200,140,30,.35);z-index:5}
+.badge17 b{font-size:92px;font-weight:900;line-height:.85;display:block}.badge17 span{font-size:30px;font-weight:900;line-height:1;display:block}
+/* features */
+.feats{position:absolute;left:24px;top:540px;width:470px;display:flex;flex-direction:column;gap:12px}
+.f{display:flex;align-items:center;gap:18px;background:#fff;border-radius:22px;padding:12px 16px;height:116px;box-shadow:0 8px 22px rgba(20,40,74,.1);font-family:Poppins;font-weight:800;font-size:34px;line-height:1.05;color:var(--navy)}
+.f em{font-style:normal;width:84px;height:84px;border-radius:50%;background:var(--navy);display:grid;place-items:center;font-size:42px;flex:none;border:4px solid var(--gold)}
+/* pages */
+.page{position:absolute;background:#fff;border-radius:10px;box-shadow:0 26px 60px rgba(20,40,74,.28);overflow:hidden}
+.ck{left:520px;top:600px;width:470px;height:660px;transform:rotate(-4deg);padding:26px 30px}
+.ck h3{font-family:Caveat;font-size:62px;color:var(--navy);margin-bottom:10px}
+.ck h5{display:inline-block;background:var(--gold2);font-family:Poppins;font-weight:800;font-size:24px;padding:2px 14px;margin:10px 0 6px}
+.ck div{display:flex;align-items:center;gap:14px;font-size:26px;font-weight:600;padding:8px 0;border-bottom:2px solid #EEF1F6}
+.ck div:before{content:"";width:24px;height:24px;border:3px solid var(--navy2);border-radius:6px;flex:none}
+.ck div.d:before{background:var(--navy2);box-shadow:inset 0 0 0 3px #fff}
+.cv{left:930px;top:560px;width:460px;height:690px;z-index:3;text-align:center;padding-top:60px;background:linear-gradient(160deg,#fff 60%,#EEF3FB)}
+.cv .b1{position:absolute;left:-80px;top:-60px;width:240px;height:240px;border-radius:50%;background:var(--blue);opacity:.45}
+.cv .b2{position:absolute;right:-90px;bottom:-60px;width:260px;height:260px;border-radius:50%;background:var(--blue);opacity:.45}
+.cv small{font-family:Poppins;font-weight:700;font-size:20px;letter-spacing:6px;color:var(--muted);position:relative}
+.cv h2{font-family:Poppins;font-weight:700;font-size:62px;line-height:1.05;margin-top:24px;color:var(--navy);position:relative}
+.cv .h{font-size:58px;color:var(--gold);margin:14px 0}
+.cv p{font-family:Poppins;font-weight:600;font-size:22px;letter-spacing:4px;color:var(--navy2);position:relative}
+/* tablet */
+.tab{position:absolute;left:1380px;top:640px;width:590px;height:520px;background:#16181d;border-radius:34px;padding:22px;box-shadow:0 30px 70px rgba(20,40,74,.35);z-index:2}
+.ts{background:#fff;border-radius:16px;height:100%;overflow:hidden}
+.ts .th{background:var(--xl);color:#fff;font-family:Poppins;font-weight:700;font-size:28px;padding:14px 20px;display:flex;align-items:center;gap:12px}
+.ts .th i{font-style:normal;background:#fff;color:var(--xl);width:36px;height:36px;border-radius:7px;display:grid;place-items:center;font-family:Inter;font-weight:900;font-size:22px}
+.ts h6{font-family:Poppins;font-size:22px;color:var(--xl);padding:12px 18px 6px}
+table{width:calc(100% - 32px);margin:0 16px;border-collapse:collapse;font-size:20px}
+th{background:#E3F2E9;color:var(--xl);padding:7px 6px;font-weight:800;text-align:center}th:first-child{text-align:left}
+td{padding:9px 6px;border-bottom:1px solid #E8ECEF;text-align:center;font-weight:700;color:#1F8A4C}td:first-child{text-align:left;color:var(--navy)}
+.deco{position:absolute;line-height:1;filter:drop-shadow(0 12px 14px rgba(0,0,0,.2))}
+/* strip */
+.strip{position:absolute;left:0;right:0;bottom:0;height:176px;background:var(--navy);display:grid;grid-template-columns:repeat(4,1fr);align-items:center;border-top:6px solid var(--gold)}
+.strip div{display:flex;align-items:center;gap:18px;padding:0 28px;border-right:2px solid rgba(255,255,255,.15);height:110px}.strip div:last-child{border:0}
+.strip em{font-style:normal;width:88px;height:88px;border-radius:50%;background:var(--gold);display:grid;place-items:center;font-size:44px;flex:none}
+.strip p{font-family:Poppins;font-weight:800;font-size:40px;line-height:1.05;color:#fff}.strip p span{display:block;font-weight:600;font-size:24px;color:var(--gold2);margin-top:4px}
+</style></head><body>
+<div id="thumb">
+  <div class="script" style="left:40px;top:40px;font-size:72px;transform:rotate(-10deg)">Small Steps,<br>&nbsp;Big Change <span style="color:var(--gold)">♡</span></div>
+  <div class="rib"><div class="d">⬇️</div><b>INSTANT<br>DOWNLOAD</b><hr><small>A4 &amp; US Letter</small><small>PDF + Canva + <em>Excel</em></small></div>
+
+  <div class="top">
+    <div class="brand">HEYFINORA</div>
+    <div class="slog">PLAN<b>•</b>CLEAN<b>•</b>FEEL BETTER</div>
+    <div class="band">ADHD CLEANING</div>
+    <div class="pl">PLANNER</div>
+    <div class="pills"><span class="pg">+ PRINTABLE &amp; EDITABLE</span><span class="px"><i>X</i>EXCEL</span></div>
+  </div>
+
+  <div class="badge17"><div><b>17</b><span>PRINTABLE PAGES</span></div></div>
+
+  <div class="feats">
+    <div class="f"><em>🧠</em>ADHD Friendly</div>
+    <div class="f"><em>📅</em>Daily, Weekly<br>&amp; Monthly</div>
+    <div class="f"><em>✅</em>Routines &amp;<br>Checklists</div>
+    <div class="f"><em>🎨</em>Edit in Canva</div>
+    <div class="f"><em>🖨️</em>Printable &amp;<br>Editable</div>
+    <div class="f"><em>📊</em>Excel Version</div>
+  </div>
+
+  <div class="page ck">
+    <h3>Cleaning Checklist</h3>
+    <h5>DAILY</h5>
+    <div class="d">Make bed</div><div class="d">Tidy living room</div><div>Wipe counters</div><div>Do dishes</div><div>Take out trash</div>
+    <h5>WEEKLY</h5>
+    <div class="d">Vacuum floors</div><div>Clean bathroom</div><div>Change bed linen</div>
+  </div>
+
+  <div class="page cv"><div class="b1"></div><div class="b2"></div>
+    <small>HEYFINORA</small>
+    <h2>ADHD<br>CLEANING<br>PLANNER</h2>
+    <div class="h">♡</div>
+    <p>A CLEANER SPACE<br>A CALMER MIND</p>
+    <svg width="220" height="150" viewBox="0 0 220 150" style="margin-top:22px;position:relative"><path d="M30 70 L110 10 L190 70 M50 55 V140 H170 V55" fill="none" stroke="#14284A" stroke-width="7" stroke-linejoin="round"/><path d="M110 120 c-18-14-28-22-28-34a12 12 0 0 1 28-6a12 12 0 0 1 28 6c0 12-10 20-28 34z" fill="none" stroke="#14284A" stroke-width="6"/></svg>
+  </div>
+
+  <div class="script" style="left:1420px;top:578px;font-size:52px;transform:rotate(-4deg);z-index:6;white-space:nowrap">Excel Version Included! ↓</div>
+  <div class="tab"><div class="ts">
+    <div class="th"><i>X</i>ADHD Cleaning Planner</div>
+    <h6>Daily Cleaning</h6>
+    <table>
+      <tr><th>Task</th><th>M</th><th>T</th><th>W</th><th>T</th><th>F</th><th>S</th><th>S</th></tr>
+      <tr><td>Make bed</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td></td><td></td></tr>
+      <tr><td>Dishes</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td></td><td></td><td></td></tr>
+      <tr><td>Laundry</td><td>✓</td><td></td><td>✓</td><td></td><td>✓</td><td></td><td></td></tr>
+      <tr><td>Trash</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td>✓</td><td></td></tr>
+      <tr><td>Floors</td><td></td><td>✓</td><td></td><td>✓</td><td></td><td>✓</td><td></td></tr>
+      <tr><td>Bathroom</td><td>✓</td><td></td><td></td><td>✓</td><td></td><td></td><td></td></tr>
+    </table>
+  </div></div>
+  
+  <span class="script" style="left:1450px;top:1192px;font-size:54px;transform:rotate(-3deg);z-index:5;white-space:nowrap">Progress, Not Perfection <span style="color:var(--gold)">♡</span></span>
+
+  <div class="strip">
+    <div><em>💛</em><p>Less Stress<span>Feel in control</span></p></div>
+    <div><em>🏠</em><p>Cleaner Home<span>Small steps, big results</span></p></div>
+    <div><em>🧠</em><p>Better Focus<span>Time for what matters</span></p></div>
+    <div><em>✨</em><p>Happier You<span>A calmer space</span></p></div>
+  </div>
+</div>
+</body></html>
