@@ -41,6 +41,17 @@ td:first-child{text-align:left;font-weight:700;font-size:25px;padding-left:12px;
 .pills{position:absolute;left:0;right:0;bottom:88px;display:flex;justify-content:center;gap:26px}
 .pills span{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--navy);font-weight:900;font-size:54px;padding:10px 46px;border-radius:999px}
 .disc{position:absolute;left:0;right:0;bottom:38px;text-align:center;color:#C9D1E2;font-weight:600;font-size:32px}
+.glow{position:absolute;left:50%;top:880px;width:1100px;height:900px;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(217,176,79,.28),rgba(217,176,79,0) 65%);z-index:1}
+.spark{position:absolute;color:var(--gold2);font-size:40px;opacity:.75;z-index:1}
+.card.l{transform:rotate(-3deg);transform-origin:right center}.card.r{transform:rotate(3deg);transform-origin:left center}
+.card{border:3px solid var(--gold)}
+.cover{border-width:4px!important;box-shadow:0 0 0 10px rgba(217,176,79,.15),0 40px 90px rgba(0,0,0,.65)!important}
+.prog{margin-top:22px}.prog .t{display:flex;justify-content:space-between;font-weight:800;font-size:26px;color:var(--navy)}
+.prog .bar{height:22px;border-radius:12px;background:#E8E1CF;margin-top:8px;overflow:hidden}.prog .bar i{display:block;height:100%;width:63%;background:linear-gradient(90deg,var(--gold),#B88A2A);border-radius:12px}
+td:first-child{font-size:30px!important}
+td{padding:16px 4px!important}
+.bx{width:32px!important;height:32px!important}.bx.d:after{font-size:24px!important;line-height:26px!important}
+.ribbon{position:absolute;right:250px;top:440px;background:#B33A3A;color:#fff;font-weight:900;font-size:30px;letter-spacing:2px;padding:10px 26px;border-radius:10px;transform:rotate(6deg);z-index:5;box-shadow:0 10px 24px rgba(0,0,0,.35)}
 </style></head><body>
 <div id="thumb">
   <div class="top">
@@ -49,10 +60,12 @@ td:first-child{text-align:left;font-weight:700;font-size:25px;padding-left:12px;
     <div class="fmt">UNDATED<i>•</i>A4 + US LETTER</div>
   </div>
 
-  <div class="card" style="left:60px">
+  <div class="glow"></div><span class="spark" style="left:90px;top:120px">✦</span><span class="spark" style="right:110px;top:150px">✦</span><span class="spark" style="left:220px;top:300px;font-size:26px">✦</span><span class="spark" style="right:230px;top:330px;font-size:26px">✦</span>
+  <div class="card l" style="left:60px">
     <div class="ch">MASTER TRACKER</div>
-    <div class="cb"><h3>Week 1</h3><div class="s">Check off every habit, every day</div>
+    <div class="cb"><h3>Week 7</h3><div class="s">Tick each habit, every day</div>
       <table id="tr"></table>
+      <div class="prog"><div class="t"><span>Challenge progress</span><span>Day 47 / 75</span></div><div class="bar"><i></i></div></div>
     </div>
   </div>
 
@@ -65,9 +78,9 @@ td:first-child{text-align:left;font-weight:700;font-size:25px;padding-left:12px;
     <div class="rules"><span>🥗 Eat Well</span><span>🏃 Move 45 min</span><span>💧 3L Water</span><span>📖 Read 10 Pages</span></div>
   </div>
 
-  <div class="card" style="right:60px">
+  <div class="card r" style="right:60px">
     <div class="ch">DAILY PLANNER</div>
-    <div class="cb"><h3>Day 12</h3><div class="s">Date: ____________</div>
+    <div class="cb"><h3>Day 47</h3><div class="s">Date: ____________</div>
       <div class="sec">TODAY'S HABITS</div>
       <div class="ln"><span class="bx d"></span>Balanced meals</div>
       <div class="ln"><span class="bx d"></span>45-min workout</div>
@@ -79,14 +92,15 @@ td:first-child{text-align:left;font-weight:700;font-size:25px;padding-left:12px;
     </div>
   </div>
 
+  <div class="ribbon">START ANYTIME</div>
   <div class="pills"><span>48 PAGES</span><span>75-DAY TRACKER</span><span>EDITABLE IN CANVA</span></div>
   <div class="disc">Instant digital download · Print at home</div>
 </div>
 <script>
 const t=document.getElementById('tr');
-let h='<tr><th>Habit</th>';for(let d=1;d<=7;d++)h+='<th>'+d+'</th>';h+='</tr>';
-const rows=['Eat well','Workout','Water 3L','Read','Sleep 7h','Journal','Stretch','No soda'];
-rows.forEach((r,i)=>{h+='<tr><td>'+r+'</td>';for(let d=1;d<=7;d++){const done=d<=5-(i%3===2?1:0)&&!(i===5&&d===3);h+='<td><span class="bx'+(done?' d':'')+'"></span></td>';}h+='</tr>';});
+let h='<tr><th>Habit</th>';for(let d=43;d<=49;d++)h+='<th>'+d+'</th>';h+='</tr>';
+const rows=['Eat well','Move 45 min','3L Water','Read 10 pg'];
+rows.forEach((r,i)=>{h+='<tr><td>'+r+'</td>';for(let d=1;d<=7;d++){const done=d<=5-(i===2?1:0);h+='<td><span class="bx'+(done?' d':'')+'"></span></td>';}h+='</tr>';});
 t.innerHTML=h;
 </script>
 </body></html>
