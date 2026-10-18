@@ -1,0 +1,100 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&family=Inter:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#111A2E;--navy2:#1C2945;--gold:#D9A93F;--gold2:#F2CF7A;--line:#E6E8EE;--muted:#5D6578;--green:#1F9D5A;--red:#D9443B;--blue:#3567D6}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#777;font-family:Inter,sans-serif;color:var(--navy)}
+#thumb{width:2000px;height:1500px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 70% 30%,#24345A 0%,#16213A 45%,#0C1322 100%)}
+.left{position:absolute;left:80px;top:70px;width:760px;color:#fff}
+.brand{font-family:Poppins;font-weight:700;font-size:34px;letter-spacing:12px;color:var(--gold)}
+h1{font-family:Inter;font-weight:900;font-size:150px;line-height:.95;letter-spacing:-4px;margin-top:20px}
+.ult{display:inline-block;margin-top:28px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--navy);font-family:Poppins;font-weight:900;font-size:62px;letter-spacing:12px;padding:8px 40px;border-radius:16px}
+.tl{margin-top:30px;font-family:Inter;font-weight:600;font-size:58px;line-height:1.15;color:#DCE3F2}
+.tl b{color:var(--gold2);font-weight:900}
+.feats{margin-top:40px;display:flex;flex-direction:column;gap:20px}
+.f{display:flex;align-items:center;gap:20px;font-family:Poppins;font-weight:700;font-size:44px;color:#fff}
+.f em{font-style:normal;width:66px;height:66px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;font-size:38px;font-weight:900;flex:none}
+/* dashboard */
+.dash{position:absolute;left:880px;top:70px;width:1080px;background:#fff;border-radius:30px;padding:40px 44px;box-shadow:0 40px 90px rgba(0,0,0,.5);transform:rotate(1.5deg);z-index:2}
+.dash h2{font-family:Poppins;font-weight:900;font-size:44px;letter-spacing:4px}
+.kp{display:grid;grid-template-columns:1fr 1fr;gap:22px;margin-top:26px}
+.k{border-radius:22px;padding:22px 30px}
+.k p{font-family:Poppins;font-weight:800;font-size:28px;letter-spacing:3px;color:#4C5468}.k h3{font-family:Inter;font-weight:900;font-size:96px;line-height:1.05}
+.bars{display:flex;align-items:flex-end;gap:16px;height:250px;margin-top:30px;border-bottom:4px solid var(--line);padding:0 10px}
+.bars div{flex:1;display:flex;align-items:flex-end;gap:10px;height:100%}
+.bars i{flex:1;border-radius:10px 10px 0 0;display:block}
+.wk{display:flex;gap:16px;padding:10px 10px 0}.wk span{flex:1;text-align:center;font-family:Poppins;font-weight:700;font-size:26px;color:var(--muted)}
+.lg{display:flex;gap:30px;justify-content:flex-end;font-family:Poppins;font-weight:700;font-size:24px;color:var(--muted);margin-top:-6px}.lg i{display:inline-block;width:20px;height:20px;border-radius:5px;margin-right:8px;vertical-align:-2px}
+/* page */
+.page{position:absolute;left:770px;top:800px;width:610px;height:740px;background:#fff;border-radius:14px;box-shadow:0 34px 80px rgba(0,0,0,.55);transform:rotate(-5deg);z-index:3;overflow:hidden}
+.ph{background:var(--navy);color:var(--gold2);display:flex;justify-content:space-between;padding:16px 28px;font-family:Poppins;font-weight:700;font-size:20px;letter-spacing:3px}
+.pb{padding:24px 30px}
+.pb h4{font-family:Poppins;font-weight:800;font-size:36px}
+.pb .gl{height:4px;background:var(--gold);margin:12px 0 18px}
+.boxes{display:grid;grid-template-columns:repeat(3,1fr);border:2px solid #EAD9AE;background:#FFF9EA}
+.boxes div{padding:12px 14px;border-right:2px solid #EAD9AE;font-family:Poppins;font-weight:800;font-size:19px;color:#7A6230}.boxes div:last-child{border:0}
+.boxes b{display:block;font-family:Inter;font-size:28px;color:var(--navy);margin-top:4px}
+table{width:100%;border-collapse:collapse;margin-top:22px;font-size:26px}
+th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px;font-family:Poppins;font-weight:700;font-size:20px;letter-spacing:1px}
+td{padding:11px 12px;border-bottom:2px solid var(--line);font-weight:700}
+tr:nth-child(even) td{background:#FBF7EC}
+td.g{color:var(--green)}td.r{color:var(--red)}
+.pills{position:absolute;right:40px;bottom:60px;display:flex;flex-direction:column;gap:20px;align-items:flex-end;z-index:4}
+.pills span{display:flex;align-items:center;gap:16px;font-family:Poppins;font-weight:800;font-size:50px;padding:12px 38px;border-radius:999px;box-shadow:0 12px 26px rgba(0,0,0,.35)}
+.pills i{font-style:normal;width:56px;height:56px;border-radius:14px;display:grid;place-items:center;font-family:Inter;font-weight:900;font-size:38px;color:#fff}
+</style></head><body>
+<div id="thumb">
+  <div class="left">
+    <div class="brand">HEYFINORA</div>
+    <h1>Weekly<br>Budget<br>Planner</h1>
+    <div class="ult">ULTIMATE</div>
+    <div class="tl">Plan, track &amp; save<br><b>every single week.</b></div>
+    <div class="feats">
+      <div class="f"><em>✓</em>Auto Dashboard</div>
+      <div class="f"><em>✓</em>Weekly Budget Pages</div>
+      <div class="f"><em>✓</em>Track Bills &amp; Savings</div>
+    </div>
+  </div>
+
+  <div class="dash">
+    <h2>BUDGET DASHBOARD</h2>
+    <div class="kp">
+      <div class="k" style="background:#DFF3E6"><p>INCOME</p><h3 style="color:var(--green)">$2,050</h3></div>
+      <div class="k" style="background:#FBE3E3"><p>EXPENSES</p><h3 style="color:var(--red)">$825</h3></div>
+      <div class="k" style="background:#E3EAFB"><p>NET CASH FLOW</p><h3 style="color:var(--blue)">$1,125</h3></div>
+      <div class="k" style="background:#F6EBCB"><p>BILLS DUE</p><h3 style="color:#9A6A12">2</h3></div>
+    </div>
+    <div class="bars">
+      <div><i style="height:70%;background:var(--navy)"></i><i style="height:45%;background:var(--gold)"></i></div>
+      <div><i style="height:78%;background:var(--navy)"></i><i style="height:48%;background:var(--gold)"></i></div>
+      <div><i style="height:66%;background:var(--navy)"></i><i style="height:40%;background:var(--gold)"></i></div>
+      <div><i style="height:92%;background:var(--navy)"></i><i style="height:36%;background:var(--gold)"></i></div>
+    </div>
+    <div class="wk"><span>Week 1</span><span>Week 2</span><span>Week 3</span><span>Week 4</span></div>
+  </div>
+
+  <div class="page">
+    <div class="ph"><span>HEYFINORA</span><span>WEEKLY BUDGET</span></div>
+    <div class="pb">
+      <h4>Weekly Budget — Week 1</h4><div class="gl"></div>
+      <div class="boxes"><div>START<b>$1,200</b></div><div>INCOME<b>$2,050</b></div><div>SAVE<b>$300</b></div></div>
+      <table>
+        <tr><th>CATEGORY</th><th>PLANNED</th><th>ACTUAL</th></tr>
+        <tr><td>Groceries</td><td>$180</td><td class="g">$165</td></tr>
+        <tr><td>Rent</td><td>$400</td><td>$400</td></tr>
+        <tr><td>Transport</td><td>$60</td><td class="r">$72</td></tr>
+        <tr><td>Dining Out</td><td>$80</td><td class="g">$58</td></tr>
+        <tr><td>Utilities</td><td>$90</td><td>$90</td></tr>
+        <tr><td>Fun</td><td>$50</td><td class="g">$40</td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="pills">
+    <span style="background:#fff;color:var(--navy)"><i style="background:#107C41">X</i>Excel</span>
+    <span style="background:#fff;color:var(--navy)"><i style="background:#0F9D58">▦</i>Google Sheets</span>
+    <span style="background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--navy)"><i style="background:var(--navy)">🖨</i>Printable PDF</span>
+  </div>
+</div>
+</body></html>
