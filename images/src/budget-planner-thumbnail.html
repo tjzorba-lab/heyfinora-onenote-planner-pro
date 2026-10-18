@@ -1,0 +1,94 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0E2440;--navy2:#173A63;--em:#0E9F6E;--em2:#14B8A6;--gold:#F5B700;--gold2:#FF8A00;--cream:#FBF9F4;--line:#E3E8EF;--muted:#4A5870;--xl:#107C41}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#777;font-family:Inter,sans-serif;color:var(--navy)}
+#thumb{width:2000px;height:1500px;position:relative;overflow:hidden;background:var(--cream)}
+.blob{position:absolute;border-radius:50%}
+.left{position:absolute;left:90px;top:70px;width:900px}
+.brand{font-family:Poppins;font-weight:800;font-size:34px;letter-spacing:6px;background:linear-gradient(90deg,var(--em),var(--em2));-webkit-background-clip:text;color:transparent}
+h1{font-family:Poppins;font-weight:900;line-height:.98;letter-spacing:-3px;margin-top:14px}
+h1 .b{font-size:158px;color:var(--navy);display:flex;align-items:center;gap:22px}
+h1 .pro{font-size:70px;letter-spacing:1px;background:linear-gradient(135deg,var(--gold),var(--gold2));color:#fff;padding:4px 26px;border-radius:18px;box-shadow:0 10px 24px rgba(255,138,0,.35)}
+h1 .p{font-size:158px;background:linear-gradient(90deg,var(--em),var(--em2));-webkit-background-clip:text;color:transparent}
+.fmt{display:inline-flex;align-items:center;gap:16px;margin-top:22px;background:var(--navy);color:#fff;font-family:Poppins;font-weight:800;font-size:46px;padding:12px 32px;border-radius:16px}
+.fmt .x{color:#4ADE80}.fmt .pl{color:var(--gold)}.fmt .pdf{color:#FF7A7A}
+.tag{margin-top:22px;font-family:Poppins;font-weight:700;font-size:44px;display:flex;gap:18px;align-items:center}
+.tag i{width:12px;height:12px;border-radius:50%;background:#B8C2D0;display:inline-block}
+.feats{margin-top:30px;display:flex;flex-direction:column;gap:16px}
+.feat{display:flex;align-items:center;gap:22px;font-family:Poppins;font-weight:700;font-size:44px;color:var(--navy)}
+.ic{width:66px;height:66px;border-radius:50%;display:grid;place-items:center;font-size:34px;flex:none;box-shadow:0 6px 16px rgba(14,36,64,.18)}
+/* sheets */
+.sheet{position:absolute;background:#fff;border-radius:18px;box-shadow:0 30px 70px rgba(14,36,64,.25);overflow:hidden;border:2px solid var(--line)}
+.sh-h{background:var(--xl);color:#fff;font-family:Poppins;font-weight:700;font-size:26px;padding:14px 22px;display:flex;gap:12px;align-items:center}
+.sh-h b{width:30px;height:30px;border-radius:7px;background:#fff;color:var(--xl);display:grid;place-items:center;font-size:20px;font-weight:900}
+table{width:100%;border-collapse:collapse;font-size:20px}
+th{background:#E8F5EE;color:var(--xl);text-align:left;padding:10px 14px;font-weight:800}
+td{padding:10px 14px;border-bottom:1px solid var(--line);font-weight:600}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:18px}
+.kpi{border:2px solid var(--line);border-radius:14px;padding:12px 16px}
+.kpi p{font-size:17px;font-weight:800;color:var(--muted);letter-spacing:1px}.kpi h3{font-family:Poppins;font-size:36px}
+.chart{display:flex;align-items:flex-end;gap:16px;height:230px;padding:0 24px 18px;border-bottom:2px solid var(--line);margin:0 18px}
+.chart div{flex:1;border-radius:8px 8px 0 0}
+.months{display:flex;gap:16px;padding:8px 42px 16px;font-size:16px;font-weight:700;color:var(--muted)}.months span{flex:1;text-align:center}
+.strip{position:absolute;left:0;right:0;bottom:0;height:170px;background:var(--navy);display:grid;grid-template-columns:repeat(4,1fr);align-items:center;text-align:center;color:#fff;font-family:Poppins}
+.strip div{border-right:2px solid rgba(255,255,255,.18);padding:0 10px}.strip div:last-child{border:0}
+.strip b{display:block;font-size:40px;font-weight:800;color:var(--gold)}.strip span{font-size:30px;font-weight:600;color:#fff}
+</style></head><body>
+<div id="thumb">
+  <div class="blob" style="width:1100px;height:1100px;background:#E3F4EC;right:-300px;top:-260px"></div>
+  <div class="blob" style="width:500px;height:500px;background:#FFF0CC;left:-200px;bottom:60px"></div>
+
+  <div class="left">
+    <div class="brand">HEYFINORA</div>
+    <h1><div class="b">BUDGET <span class="pro">PRO</span></div><div class="p">PLANNER</div></h1>
+    <div class="fmt"><span class="x">EXCEL</span><span class="pl">+</span><span>PRINTABLE</span><span class="pdf">PDF</span></div>
+    <div class="tag"><span style="color:#0E9F6E">Plan</span><i></i><span style="color:#2563EB">Track</span><i></i><span style="color:#F08C00">Save</span><i></i><span style="color:#9333EA">Organize</span></div>
+    <div class="feats">
+      <div class="feat"><div class="ic" style="background:#0E9F6E">📊</div>Auto Dashboard &amp; Charts</div>
+      <div class="feat"><div class="ic" style="background:#2563EB">📅</div>Bill Calendar</div>
+      <div class="feat"><div class="ic" style="background:#F5B700">🐷</div>Savings &amp; Sinking Funds</div>
+      <div class="feat"><div class="ic" style="background:#EF4444">💳</div>Debt Payoff Tracker</div>
+      <div class="feat"><div class="ic" style="background:#9333EA">📈</div>Net Worth Tracker</div>
+      <div class="feat"><div class="ic" style="background:#14B8A6">🖨️</div>50-Page Printable Planner</div>
+    </div>
+  </div>
+
+  <!-- back sheet: monthly overview -->
+  <div class="sheet" style="left:1150px;top:90px;width:780px;transform:rotate(3deg)">
+    <div class="sh-h"><b>X</b>Monthly Budget Overview</div>
+    <table>
+      <tr><th>Category</th><th>Budget</th><th>Actual</th></tr>
+      <tr><td>Income</td><td>$5,200</td><td style="color:#0E9F6E">$5,350</td></tr>
+      <tr><td>Housing</td><td>$1,600</td><td>$1,600</td></tr>
+      <tr><td>Groceries</td><td>$550</td><td style="color:#EF4444">$612</td></tr>
+      <tr><td>Transport</td><td>$300</td><td>$265</td></tr>
+      <tr><td>Savings</td><td>$800</td><td style="color:#0E9F6E">$900</td></tr>
+    </table>
+  </div>
+
+  <!-- front sheet: dashboard -->
+  <div class="sheet" style="left:1020px;top:520px;width:900px">
+    <div class="sh-h" style="background:var(--navy)"><b style="color:var(--navy)">X</b>Executive Dashboard</div>
+    <div class="kpis">
+      <div class="kpi" style="border-top:6px solid #0E9F6E"><p>INCOME</p><h3 style="color:#0E9F6E">$5,350</h3></div>
+      <div class="kpi" style="border-top:6px solid #EF4444"><p>EXPENSES</p><h3 style="color:#EF4444">$3,980</h3></div>
+      <div class="kpi" style="border-top:6px solid #2563EB"><p>SAVED</p><h3 style="color:#2563EB">$1,370</h3></div>
+    </div>
+    <div class="chart">
+      <div style="height:55%;background:#0E9F6E"></div><div style="height:70%;background:#14B8A6"></div><div style="height:48%;background:#0E9F6E"></div>
+      <div style="height:82%;background:#14B8A6"></div><div style="height:64%;background:#0E9F6E"></div><div style="height:92%;background:#F5B700"></div>
+    </div>
+    <div class="months"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span></div>
+  </div>
+
+  <div class="strip">
+    <div><b>AUTOMATIC</b><span>Calculations</span></div>
+    <div><b>18 CONNECTED</b><span>Sheets</span></div>
+    <div><b>US LETTER</b><span>+ A4</span></div>
+    <div><b>BEGINNER</b><span>Friendly</span></div>
+  </div>
+</div>
+</body></html>
