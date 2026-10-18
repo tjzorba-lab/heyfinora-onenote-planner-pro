@@ -1,0 +1,92 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#14284A;--navy2:#1E3A66;--coral:#E8735A;--teal:#2A9D8F;--cream:#F7F3EA;--line:#E3E8EF;--muted:#5A6378;--gold:#F2C46B}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#777;font-family:Inter,sans-serif;color:var(--navy)}
+#thumb{width:2000px;height:1500px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 45%,#2B4D80,#1A3460 50%,#0F2140)}
+.top{position:absolute;left:0;right:0;top:30px;text-align:center;color:#fff}
+.brand{font-family:Poppins;font-weight:700;font-size:28px;letter-spacing:10px;color:#9FB6D8}
+h1{font-family:Poppins;font-weight:900;font-size:104px;line-height:1.05;letter-spacing:-2px;margin-top:4px}
+h1 span{color:var(--gold)}
+.sub{margin-top:10px;display:inline-flex;gap:18px;align-items:center;font-family:Poppins;font-weight:700;font-size:44px}
+.sub i{font-style:normal;color:var(--coral)}
+.sub b{background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.25);padding:6px 26px;border-radius:999px;font-weight:700}
+/* laptop */
+.laptop{position:absolute;left:40px;top:340px;width:1420px;z-index:2}
+.screen{background:#0b0f17;border-radius:30px 30px 0 0;padding:18px;box-shadow:0 40px 90px rgba(0,0,0,.5)}
+.base{height:40px;background:linear-gradient(#e1e4ea,#aeb5c2);border-radius:0 0 34px 34px;margin:0 -24px;position:relative}
+.base:after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:220px;height:13px;background:#9da5b3;border-radius:0 0 13px 13px}
+.app{background:#FBFAF6;border-radius:10px;height:790px;padding:22px 26px;overflow:hidden}
+.ah{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px}
+.ah h2{font-family:Poppins;font-weight:800;font-size:38px}.ah span{font-size:22px;font-weight:700;color:var(--muted)}
+.kp{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-bottom:16px}
+.k{background:#fff;border:2px solid var(--line);border-radius:12px;overflow:hidden;text-align:center}
+.k p{background:var(--navy);color:#fff;font-size:19px;font-weight:800;letter-spacing:1px;padding:8px 4px}
+.k h3{font-family:Poppins;font-size:46px;padding:10px 4px;line-height:1.1}
+.ok{color:var(--teal)}
+.cards{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.c{background:#fff;border:2px solid var(--line);border-radius:12px;padding:16px 20px;height:510px}
+.c h4{font-family:Poppins;font-weight:800;font-size:30px;text-align:center;margin-bottom:10px}
+.bars{display:flex;align-items:flex-end;gap:12px;height:380px;border-bottom:3px solid var(--line);padding:0 8px}
+.bars i{flex:1;background:linear-gradient(180deg,#3FB8A8,var(--teal));border-radius:6px 6px 0 0}
+/* docs */
+.doc{position:absolute;background:#fff;border-radius:10px;box-shadow:0 26px 60px rgba(0,0,0,.4);padding:26px 28px}
+.doc h5{font-family:Poppins;font-weight:800;font-size:30px;color:var(--navy)}
+.doc .hb{height:14px;background:var(--navy);border-radius:4px;margin:14px 0}
+.doc .l{height:14px;border-radius:7px;background:#E5E9F0;margin:13px 0}
+.doc .row{display:flex;justify-content:space-between;font-size:26px;font-weight:700;padding:10px 0;border-bottom:2px solid var(--line)}
+.doc .row b{color:var(--teal)}
+/* pills */
+.pills{position:absolute;left:0;right:0;bottom:56px;display:flex;justify-content:center;gap:26px}
+.pills span{background:var(--coral);color:#fff;font-family:Poppins;font-weight:800;font-size:50px;padding:18px 44px;border-radius:999px;box-shadow:0 12px 26px rgba(232,115,90,.35)}
+.seal{position:absolute;right:120px;top:930px;width:240px;height:240px;border-radius:50%;background:var(--gold);border:8px solid #fff;display:grid;place-items:center;text-align:center;color:var(--navy);font-family:Poppins;transform:rotate(10deg);box-shadow:0 18px 40px rgba(0,0,0,.35);z-index:5}
+.seal b{font-size:46px;font-weight:900;line-height:1;display:block}.seal small{font-size:26px;font-weight:800;display:block;margin-top:4px}
+</style></head><body>
+<div id="thumb">
+  <div class="top">
+    <div class="brand">HEYFINORA</div>
+    <h1>Loan-Ready <span>Business Plan</span> Kit</h1>
+    <div class="sub"><b>Excel</b><i>+</i><b>Google Sheets</b><i>+</i><b>Fillable PDF</b></div>
+  </div>
+
+  <div class="doc" style="left:1500px;top:390px;width:440px;height:560px;transform:rotate(6deg);z-index:1">
+    <h5>Loan Request</h5><div class="hb"></div><div class="l" style="width:90%"></div><div class="l" style="width:75%"></div><div class="l" style="width:85%"></div><div class="l" style="width:60%"></div><div class="l" style="width:80%"></div>
+  </div>
+  <div class="doc" style="left:1440px;top:480px;width:480px;height:620px;transform:rotate(-2deg);z-index:3">
+    <h5>Business Plan Summary</h5><div class="hb" style="background:var(--teal)"></div>
+    <div class="row"><span>Loan Amount</span><b>$150,000</b></div>
+    <div class="row"><span>Term</span><b>60 mo</b></div>
+    <div class="row"><span>Monthly Payment</span><b>$2,980</b></div>
+    <div class="row"><span>DSCR</span><b>1.74x</b></div>
+    <div class="row"><span>Break-even</span><b>Month 9</b></div>
+    <div class="l" style="width:88%;margin-top:22px"></div><div class="l" style="width:70%"></div><div class="l" style="width:80%"></div>
+  </div>
+
+  <div class="laptop">
+    <div class="screen"><div class="app">
+      <div class="ah"><h2>Bloom &amp; Brew Café — Financial Dashboard</h2><span>36-Month Plan</span></div>
+      <div class="kp">
+        <div class="k"><p>YEAR 1 REVENUE</p><h3>$176,400</h3></div>
+        <div class="k"><p>NET PROFIT</p><h3>$41,200</h3></div>
+        <div class="k"><p>DSCR</p><h3 class="ok">1.74x</h3></div>
+        <div class="k"><p>LOAN CHECKS</p><h3 class="ok" style="font-size:38px">ALL OK ✓</h3></div>
+      </div>
+      <div class="cards">
+        <div class="c"><h4>Year 1 Revenue vs Costs</h4>
+          <div class="bars"><i style="height:45%"></i><i style="height:52%"></i><i style="height:50%"></i><i style="height:58%"></i><i style="height:62%"></i><i style="height:60%"></i><i style="height:68%"></i><i style="height:72%"></i><i style="height:70%"></i><i style="height:80%"></i><i style="height:86%"></i><i style="height:94%"></i></div>
+        </div>
+        <div class="c"><h4>Year 1 Closing Cash Balance</h4>
+          <svg viewBox="0 0 600 300" width="100%" height="390"><g stroke="#E5E9F0" stroke-width="2"><line x1="0" y1="60" x2="600" y2="60"/><line x1="0" y1="140" x2="600" y2="140"/><line x1="0" y1="220" x2="600" y2="220"/></g><path d="M10 250 C150 245 260 230 360 190 S520 90 590 40" fill="none" stroke="#14284A" stroke-width="8" stroke-linecap="round"/><circle cx="590" cy="40" r="12" fill="#E8735A"/></svg>
+        </div>
+      </div>
+    </div></div>
+    <div class="base"></div>
+  </div>
+
+  <div class="seal"><div><b>LOAN<br>READY</b><small>Bank Format</small></div></div>
+
+  <div class="pills"><span>36-Month Projections</span><span>DSCR &amp; Loan Schedules</span><span>Instant Download</span></div>
+</div>
+</body></html>
