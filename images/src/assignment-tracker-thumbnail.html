@@ -1,0 +1,139 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0F2A44;--navy2:#1B3D5E;--green:#0F9D58;--green2:#34C47C;--mint:#E6F6EE;--cream:#FBF8F2;--ink:#14213D;--muted:#5D6B82;--line:#E3E8EF;--gold:#F4B400;--red:#E5533D;--blue:#3B82F6}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#777;font-family:Inter,sans-serif;color:var(--ink)}
+#thumb{width:2700px;height:2025px;position:relative;overflow:hidden;background:var(--cream)}
+.poppins{font-family:Poppins,sans-serif}
+.blob{position:absolute;border-radius:50%}
+/* left */
+.left{position:absolute;left:130px;top:150px;width:1060px}
+.badge{display:inline-flex;align-items:center;gap:18px;background:#fff;border:3px solid var(--line);border-radius:999px;padding:16px 36px 16px 18px;font-size:38px;font-weight:700;box-shadow:0 10px 30px rgba(15,42,68,.10)}
+.sheet-ico{width:62px;height:62px;border-radius:14px;background:var(--green);position:relative}
+.sheet-ico:before{content:"";position:absolute;left:14px;top:14px;width:34px;height:34px;background:
+ linear-gradient(#fff,#fff) 0 0/34px 6px no-repeat,linear-gradient(#fff,#fff) 0 14px/34px 6px no-repeat,linear-gradient(#fff,#fff) 0 28px/34px 6px no-repeat,linear-gradient(#fff,#fff) 12px 0/6px 34px no-repeat}
+h1{font-family:Poppins,sans-serif;font-weight:900;font-size:178px;line-height:.98;letter-spacing:-5px;margin-top:60px;color:var(--navy)}
+h1 span{color:var(--green)}
+.sub{font-family:Poppins,sans-serif;font-size:62px;font-weight:600;color:var(--muted);margin-top:34px;line-height:1.2}
+.bar{width:180px;height:12px;border-radius:8px;background:var(--gold);margin:56px 0 56px}
+.feats{display:flex;flex-direction:column;gap:28px}
+.feat{display:flex;align-items:center;gap:26px;background:#fff;border-radius:28px;padding:24px 40px 24px 24px;font-size:50px;font-weight:700;box-shadow:0 10px 30px rgba(15,42,68,.09);border:3px solid var(--line);width:max-content}
+.tick{width:68px;height:68px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-size:42px;font-weight:900;flex:none}
+/* laptop */
+.laptop{position:absolute;left:1400px;top:420px;width:1200px}
+.screen{background:#141a24;border-radius:40px 40px 0 0;padding:28px;box-shadow:0 50px 110px rgba(15,42,68,.35)}
+.base{height:56px;background:linear-gradient(#dfe3ea,#b8bfcb);border-radius:0 0 48px 48px;margin:0 -110px;position:relative}
+.base:after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:280px;height:18px;background:#a7afbc;border-radius:0 0 18px 18px}
+.app{background:#fff;border-radius:14px;overflow:hidden;height:800px;display:flex;flex-direction:column}
+.tbar{height:54px;background:#F1F3F4;display:flex;align-items:center;gap:14px;padding:0 22px;font-size:20px;color:#444;font-weight:600;border-bottom:1px solid #ddd}
+.tbar .ic{width:30px;height:30px;border-radius:7px;background:var(--green)}
+.dash{flex:1;padding:26px 30px;background:#F7F9FC}
+.dh{background:linear-gradient(120deg,var(--navy),var(--navy2));color:#fff;border-radius:18px;padding:22px 30px;display:flex;justify-content:space-between;align-items:center}
+.dh b{font-family:Poppins;font-size:36px;letter-spacing:1px}
+.dh small{font-size:19px;opacity:.85}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin:20px 0}
+.st{background:#fff;border-radius:16px;padding:16px 20px;border:1px solid var(--line)}
+.st p{font-size:16px;color:var(--muted);font-weight:700;letter-spacing:1px}
+.st h3{font-family:Poppins;font-size:46px;line-height:1.1}
+.row2{display:grid;grid-template-columns:1.7fr 1fr;gap:18px}
+.panel{background:#fff;border-radius:16px;border:1px solid var(--line);padding:16px 18px}
+.panel h4{font-size:19px;color:var(--navy);margin-bottom:10px}
+table{width:100%;border-collapse:collapse;font-size:17px}
+th{background:var(--navy);color:#fff;text-align:left;padding:10px 10px;font-weight:700}
+td{padding:11px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+.chip{display:inline-block;padding:4px 12px;border-radius:999px;font-weight:700;font-size:15px}
+.done{background:#DDF4E7;color:#0B7A43}.prog{background:#FFF1CC;color:#9A6B00}.todo{background:#FDE2DD;color:#B33A26}
+.pr{font-weight:800}
+.ring{width:190px;height:190px;border-radius:50%;margin:8px auto 14px;background:conic-gradient(var(--green) 0 68%,#E8EDF3 0);display:grid;place-items:center}
+.ring div{width:140px;height:140px;border-radius:50%;background:#fff;display:grid;place-items:center;font-family:Poppins;font-weight:800;font-size:44px;color:var(--navy)}
+.pb{height:14px;border-radius:8px;background:#E8EDF3;margin:6px 0 12px;overflow:hidden}.pb i{display:block;height:100%;border-radius:8px}
+.lg{font-size:16px;font-weight:700;color:var(--muted);display:flex;justify-content:space-between}
+/* phone */
+.phone{position:absolute;left:1080px;top:1200px;width:340px;height:590px;z-index:3;background:#141a24;border-radius:56px;padding:18px;box-shadow:0 40px 90px rgba(15,42,68,.40)}
+.pscr{background:#F7F9FC;border-radius:42px;height:100%;overflow:hidden;padding:46px 18px 18px}
+.pscr .dh{padding:14px 16px;border-radius:14px}.pscr .dh b{font-size:21px}
+.pi{background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 14px;margin-top:12px;font-size:16px;font-weight:700}
+.pi span{display:block;margin-top:6px}
+/* pdf sticker */
+.sticker{z-index:5;position:absolute;right:90px;top:90px;width:290px;height:290px;border-radius:50%;background:var(--gold);color:var(--navy);display:grid;place-items:center;text-align:center;transform:rotate(10deg);box-shadow:0 20px 50px rgba(0,0,0,.18);border:10px solid #fff}
+.sticker b{font-family:Poppins;font-size:62px;line-height:.95;font-weight:900}.sticker small{font-size:30px;font-weight:800;display:block;margin-top:6px}
+/* bottom strip */
+.strip{position:absolute;left:0;right:0;bottom:0;height:200px;background:var(--navy);display:flex;align-items:center;justify-content:center;gap:90px;color:#fff;font-size:50px;font-weight:700;font-family:Poppins}
+.strip span{display:flex;align-items:center;gap:22px}.strip i{width:22px;height:22px;border-radius:50%;background:var(--green2);display:inline-block}
+.brand{position:absolute;left:130px;top:70px;font-weight:800;letter-spacing:12px;font-size:34px;color:var(--navy);opacity:.7}
+.minis{position:absolute;left:1500px;top:1420px;display:flex;gap:26px}.mini{background:#fff;border:3px solid var(--line);border-radius:24px;padding:22px 30px;font-size:36px;font-weight:700;box-shadow:0 10px 30px rgba(15,42,68,.09);display:flex;align-items:center;gap:14px}.mini em{font-style:normal;font-size:42px}
+</style></head><body>
+<div id="thumb">
+  <div class="blob" style="width:1500px;height:1500px;background:var(--mint);right:-420px;top:-360px"></div>
+  <div class="blob" style="width:620px;height:620px;background:#FFF1CC;left:-260px;bottom:-120px"></div>
+  <div class="brand">HEYFINORA</div>
+
+  <div class="left">
+    <div class="badge"><div class="sheet-ico"></div>Google Sheets Template</div>
+    <h1>Assignment<br><span>Tracker</span></h1>
+    <div class="sub">Student Planner Spreadsheet</div>
+    <div class="bar"></div>
+    <div class="feats">
+      <div class="feat"><div class="tick">✓</div>Automatic Deadlines</div>
+      <div class="feat"><div class="tick">✓</div>Smart Progress Dashboard</div>
+      <div class="feat"><div class="tick">✓</div>Track 300+ Assignments</div>
+      <div class="feat"><div class="tick">✓</div>Printable PDF Included</div>
+    </div>
+  </div>
+
+  <div class="sticker"><div><b>PDF<br>+ SHEETS</b><small>2-in-1</small></div></div>
+
+  <div class="laptop">
+    <div class="screen"><div class="app">
+      <div class="tbar"><div class="ic"></div>Assignment Tracker PRO &nbsp;·&nbsp; <span style="font-weight:500;color:#777">File &nbsp; Edit &nbsp; View &nbsp; Insert &nbsp; Format &nbsp; Data</span></div>
+      <div class="dash">
+        <div class="dh"><b>ASSIGNMENT DASHBOARD</b><small>Fall Semester 2026</small></div>
+        <div class="stats">
+          <div class="st" style="border-top:6px solid var(--navy)"><p>TOTAL</p><h3>24</h3></div>
+          <div class="st" style="border-top:6px solid var(--green)"><p>COMPLETED</p><h3 style="color:var(--green)">16</h3></div>
+          <div class="st" style="border-top:6px solid var(--gold)"><p>IN PROGRESS</p><h3 style="color:#C98F00">5</h3></div>
+          <div class="st" style="border-top:6px solid var(--red)"><p>DUE THIS WEEK</p><h3 style="color:var(--red)">3</h3></div>
+        </div>
+        <div class="row2">
+          <div class="panel"><h4>Upcoming Assignments</h4>
+            <table>
+              <tr><th>Assignment</th><th>Subject</th><th>Due</th><th>Status</th></tr>
+              <tr><td>Biology Lab Report</td><td>Science</td><td>Oct 20</td><td><span class="chip prog">In Progress</span></td></tr>
+              <tr><td>English Essay Draft</td><td>English</td><td>Oct 21</td><td><span class="chip todo">Not Started</span></td></tr>
+              <tr><td>Economics Presentation</td><td>Business</td><td>Oct 23</td><td><span class="chip done">Completed</span></td></tr>
+              <tr><td>Math Problem Set 7</td><td>Math</td><td>Oct 24</td><td><span class="chip done">Completed</span></td></tr>
+              <tr><td>History Research Paper</td><td>History</td><td>Oct 27</td><td><span class="chip prog">In Progress</span></td></tr>
+              <tr><td>Chemistry Quiz Prep</td><td>Science</td><td>Oct 29</td><td><span class="chip todo">Not Started</span></td></tr>
+            </table>
+          </div>
+          <div class="panel"><h4>Semester Progress</h4>
+            <div class="ring"><div>68%</div></div>
+            <div class="lg"><span>Math</span><span>85%</span></div><div class="pb"><i style="width:85%;background:var(--green)"></i></div>
+            <div class="lg"><span>Science</span><span>62%</span></div><div class="pb"><i style="width:62%;background:var(--blue)"></i></div>
+            <div class="lg"><span>English</span><span>48%</span></div><div class="pb"><i style="width:48%;background:var(--gold)"></i></div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+    <div class="base"></div>
+  </div>
+
+  <div class="phone"><div class="pscr">
+    <div class="dh"><b>MY ASSIGNMENTS</b></div>
+    <div class="pi">Biology Lab Report<span class="chip prog">Due Oct 20</span></div>
+    <div class="pi">English Essay Draft<span class="chip todo">Due Oct 21</span></div>
+    <div class="pi">Economics Presentation<span class="chip done">Done ✓</span></div>
+    <div class="pi">Math Problem Set 7<span class="chip done">Done ✓</span></div>
+    
+  </div></div>
+
+  <div class="minis"><div class="mini"><em>🎨</em>Color-Coded</div><div class="mini"><em>⏰</em>Due Alerts</div><div class="mini"><em>📊</em>Auto Progress</div></div>
+  <div class="strip">
+    <span><i></i>Instant Download</span>
+    <span><i></i>Easy to Use</span>
+    <span><i></i>Works on Any Device</span>
+  </div>
+</div>
+</body></html>
