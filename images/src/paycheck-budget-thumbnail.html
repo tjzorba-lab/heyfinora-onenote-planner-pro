@@ -1,0 +1,133 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0D1F3C;--navy2:#1A3563;--gold:#E8B53A;--gold2:#F6D27A;--cream:#FAF7F0;--line:#E2E7EF;--muted:#55627A;--blue:#2F6FD6;--sky:#7FB2F0}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#777;font-family:Inter,sans-serif;color:var(--navy)}
+#thumb{width:2000px;height:1500px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 0%,#FFFFFF 0%,var(--cream) 60%,#F1EADB 100%)}
+.top{position:absolute;left:0;right:0;top:34px;text-align:center}
+.brand{display:inline-flex;align-items:center;gap:22px;font-family:Poppins;font-weight:700;font-size:32px;letter-spacing:12px;color:var(--navy2)}
+.brand:before,.brand:after{content:"";width:90px;height:3px;background:var(--gold)}
+h1{font-family:Poppins;font-weight:900;font-size:122px;line-height:1.05;color:var(--navy);letter-spacing:-2px;margin-top:6px}
+.pill{display:inline-block;margin-top:10px;background:linear-gradient(135deg,var(--gold2),var(--gold) 50%,#C9921E);color:var(--navy);font-family:Poppins;font-weight:900;font-size:76px;line-height:1;padding:16px 60px;border-radius:22px;box-shadow:0 14px 30px rgba(201,146,30,.35);letter-spacing:2px}
+.subt{margin-top:18px;display:inline-flex;align-items:center;gap:18px;font-family:Poppins;font-weight:800;font-size:40px;letter-spacing:3px;color:var(--navy2)}
+.subt .x{color:#107C41}.subt .g{color:#0F9D58}
+.ico{width:54px;height:54px;border-radius:12px;display:grid;place-items:center;color:#fff;font-family:Inter;font-weight:900;font-size:32px}
+/* badges */
+.round{position:absolute;width:270px;height:270px;border-radius:50%;display:grid;place-items:center;text-align:center;box-shadow:0 20px 50px rgba(13,31,60,.25)}
+.tabs{right:40px;top:40px;background:var(--navy);color:#fff;border:8px solid var(--gold)}
+.tabs b{font-family:Poppins;font-size:90px;line-height:.9;color:var(--gold);display:block}.tabs span{font-family:Poppins;font-weight:800;font-size:40px;display:block}.tabs small{font-family:Poppins;font-weight:600;font-size:22px;color:#C9D3E3;display:block;margin-top:4px}
+.easy{left:40px;top:40px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--navy);border:8px solid #fff;transform:rotate(-8deg)}
+.easy b{font-family:Poppins;font-size:60px;line-height:.95;font-weight:900;display:block}.easy small{font-family:Poppins;font-weight:700;font-size:24px;display:block;margin-top:6px}
+/* features */
+.feats{position:absolute;left:36px;top:470px;width:510px;display:flex;flex-direction:column;gap:18px}
+.f{display:flex;align-items:center;gap:20px;background:linear-gradient(120deg,var(--navy),var(--navy2));color:#fff;border-radius:22px;padding:20px 20px;font-family:Poppins;font-weight:700;font-size:38px;white-space:nowrap;box-shadow:0 10px 24px rgba(13,31,60,.22)}
+.f em{font-style:normal;width:72px;height:72px;border-radius:18px;background:var(--gold);display:grid;place-items:center;font-size:40px;flex:none}
+/* laptop */
+.laptop{position:absolute;left:580px;top:470px;width:1385px}
+.screen{background:#11151d;border-radius:34px 34px 0 0;padding:20px;box-shadow:0 40px 90px rgba(13,31,60,.4)}
+.base{height:44px;background:linear-gradient(#e0e3e9,#b4bac6);border-radius:0 0 40px 40px;margin:0 -70px;position:relative}
+.base:after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:240px;height:14px;background:#a4abb8;border-radius:0 0 14px 14px}
+.app{background:#F5F7FB;border-radius:12px;height:760px;padding:20px;overflow:hidden}
+.ah{background:var(--navy);color:#fff;border-radius:14px;padding:16px 24px;display:flex;justify-content:space-between;align-items:center;font-family:Poppins;font-weight:800;font-size:34px;letter-spacing:2px}
+.ah span{background:#fff;color:var(--navy);font-size:22px;letter-spacing:0;padding:8px 18px;border-radius:10px;font-weight:700}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin:16px 0}
+.k{background:var(--navy2);color:#fff;border-radius:14px;padding:14px 18px;text-align:center}
+.k p{font-size:19px;font-weight:800;letter-spacing:1px;color:#C9D3E3}.k h3{font-family:Poppins;font-size:52px;line-height:1.1}
+.k.g{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--navy)}.k.g p{color:var(--navy)}
+.grid{display:grid;grid-template-columns:1fr 1.05fr 1.25fr;gap:14px}
+.card{background:#fff;border:2px solid var(--line);border-radius:14px;padding:14px 16px;height:470px}
+.card h4{font-family:Poppins;font-size:24px;font-weight:800;color:var(--navy);letter-spacing:1px;margin-bottom:10px}
+.bars{display:flex;align-items:flex-end;gap:20px;height:330px;padding:0 10px;border-bottom:2px solid var(--line)}
+.bars div{flex:1;border-radius:8px 8px 0 0;position:relative}
+.bars div b{position:absolute;top:-34px;left:0;right:0;text-align:center;font-size:21px;color:var(--navy)}
+.bl{display:flex;gap:20px;padding:8px 10px 0;font-size:19px;font-weight:700;color:var(--muted)}.bl span{flex:1;text-align:center}
+.pie{width:210px;height:210px;border-radius:50%;margin:4px auto 14px;background:conic-gradient(var(--navy) 0 35%,var(--blue) 0 55%,var(--sky) 0 72%,var(--gold) 0 88%,#C9D3E3 0)}
+.lg div{display:flex;align-items:center;gap:10px;font-size:21px;font-weight:700;margin:6px 0}.lg i{width:18px;height:18px;border-radius:5px;display:inline-block}.lg span{margin-left:auto;color:var(--muted)}
+table{width:100%;border-collapse:collapse;font-size:21px}
+th{background:#EEF2F8;text-align:left;padding:9px 8px;font-weight:800;color:var(--navy)}
+td{padding:11px 8px;border-bottom:1px solid var(--line);font-weight:700}
+.ch{display:inline-block;padding:4px 12px;border-radius:999px;font-size:18px;font-weight:800}
+.paid{background:#DDF4E7;color:#0B7A43}.due{background:#FDE7C7;color:#94570A}
+.bonus{position:absolute;right:50px;top:1215px;background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--navy);font-family:Poppins;font-weight:900;font-size:34px;padding:14px 28px;border-radius:16px;box-shadow:0 12px 26px rgba(201,146,30,.4);text-align:center;line-height:1.1;transform:rotate(-4deg);border:5px solid #fff}
+.bonus small{display:block;font-size:24px;font-weight:700}
+.strip{position:absolute;left:0;right:0;bottom:0;height:160px;background:var(--navy);display:grid;grid-template-columns:repeat(5,1fr);align-items:center;color:#fff;font-family:Poppins;border-top:6px solid var(--gold)}
+.strip div{display:flex;align-items:center;justify-content:center;gap:14px;border-right:2px solid rgba(255,255,255,.15);height:100px}.strip div:last-child{border:0}
+.strip em{font-style:normal;font-size:44px}
+.strip p{font-weight:800;font-size:30px;line-height:1.1;color:var(--gold)}.strip p span{display:block;color:#fff;font-weight:600;font-size:26px}
+</style></head><body>
+<div id="thumb">
+  <div class="round easy"><div><b>EASY<br>TO USE</b><small>Step-by-Step Guide</small></div></div>
+  <div class="round tabs"><div><b>15</b><span>TABS</span><small>All-in-One<br>Planner</small></div></div>
+
+  <div class="top">
+    <div class="brand">HEYFINORA</div>
+    <h1>PAYCHECK BUDGET</h1>
+    <div class="pill">PLANNER PRO</div><br>
+    <div class="subt"><div class="ico" style="background:#107C41">X</div><span class="x">EXCEL</span>&amp;<div class="ico" style="background:#0F9D58">▦</div><span class="g">GOOGLE SHEETS</span></div>
+  </div>
+
+  <div class="feats">
+    <div class="f"><em>💵</em>Plan Paychecks</div>
+    <div class="f"><em>🧾</em>Track Bills</div>
+    <div class="f"><em>📊</em>Manage Expenses</div>
+    <div class="f"><em>🐷</em>Grow Savings</div>
+    <div class="f"><em>💳</em>Pay Off Debt</div>
+    <div class="f"><em>🎯</em>Reach Goals</div>
+  </div>
+
+  <div class="laptop">
+    <div class="screen"><div class="app">
+      <div class="ah">PAYCHECK BUDGET PLANNER<span>January 2026 ▾</span></div>
+      <div class="kpis">
+        <div class="k"><p>TOTAL INCOME</p><h3>$4,800</h3></div>
+        <div class="k"><p>ALLOCATED</p><h3>$4,250</h3></div>
+        <div class="k"><p>TOTAL SPENT</p><h3>$3,920</h3></div>
+        <div class="k g"><p>REMAINING</p><h3>$330</h3></div>
+      </div>
+      <div class="grid">
+        <div class="card"><h4>INCOME vs EXPENSES</h4>
+          <div class="bars">
+            <div style="height:88%;background:var(--navy)"><b>$4.8k</b></div>
+            <div style="height:72%;background:var(--blue)"><b>$3.9k</b></div>
+            <div style="height:18%;background:var(--gold)"><b>$330</b></div>
+          </div>
+          <div class="bl"><span>Income</span><span>Spent</span><span>Left</span></div>
+        </div>
+        <div class="card"><h4>BUDGET ALLOCATION</h4>
+          <div class="pie"></div>
+          <div class="lg">
+            <div><i style="background:var(--navy)"></i>Bills<span>35%</span></div>
+            <div><i style="background:var(--blue)"></i>Living<span>20%</span></div>
+            <div><i style="background:var(--sky)"></i>Savings<span>17%</span></div>
+            <div><i style="background:var(--gold)"></i>Debt<span>16%</span></div>
+          </div>
+        </div>
+        <div class="card"><h4>UPCOMING BILLS</h4>
+          <table>
+            <tr><th>Bill</th><th>Amount</th><th>Status</th></tr>
+            <tr><td>Rent</td><td>$1,400</td><td><span class="ch paid">Paid</span></td></tr>
+            <tr><td>Car Loan</td><td>$320</td><td><span class="ch paid">Paid</span></td></tr>
+            <tr><td>Electric</td><td>$95</td><td><span class="ch due">Due</span></td></tr>
+            <tr><td>Phone</td><td>$60</td><td><span class="ch due">Due</span></td></tr>
+            <tr><td>Internet</td><td>$55</td><td><span class="ch due">Due</span></td></tr>
+            <tr><td>Insurance</td><td>$140</td><td><span class="ch paid">Paid</span></td></tr>
+          </table>
+        </div>
+      </div>
+    </div></div>
+    <div class="base"></div>
+  </div>
+
+  <div class="bonus">BONUS<small>Printable Planner</small></div>
+
+  <div class="strip">
+    <div><em>📅</em><p>Weekly<span>Biweekly</span></p></div>
+    <div><em>🗓️</em><p>Semi-Monthly<span>Monthly</span></p></div>
+    <div><em>⚙️</em><p>Fully<span>Automated</span></p></div>
+    <div><em>📈</em><p>Beautiful<span>Dashboards</span></p></div>
+    <div><em>👍</em><p>Beginner<span>Friendly</span></p></div>
+  </div>
+</div>
+</body></html>
