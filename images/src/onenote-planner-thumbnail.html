@@ -1,0 +1,132 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1F1B2E;--plum:#5B3E8C;--plum2:#7A5BB0;--deep:#2A1B47;--lilac:#ECE4F7;--cream:#FAF6F0;--muted:#5A5468;--line:#E4DCEE;--gold:#E9B949;--on:#7719AA}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#777;font-family:Inter,sans-serif;color:var(--ink)}
+#thumb{width:2700px;height:2025px;position:relative;overflow:hidden;background:var(--cream)}
+.blob{position:absolute;border-radius:50%}
+.left{position:absolute;left:130px;top:110px;width:1250px}
+.badge{display:inline-flex;align-items:center;gap:20px;background:#fff;border:3px solid var(--line);border-radius:999px;padding:18px 42px 18px 20px;font-family:Poppins;font-size:46px;font-weight:700;box-shadow:0 10px 30px rgba(42,27,71,.10)}
+.on-ico{width:72px;height:72px;border-radius:16px;background:var(--on);color:#fff;display:grid;place-items:center;font-family:Inter;font-size:46px;font-weight:900}
+h1{font-family:Poppins,sans-serif;font-weight:800;font-size:178px;line-height:1;letter-spacing:-4px;margin-top:50px;color:var(--deep)}
+h1 span{color:var(--plum)}
+.years{display:inline-block;margin-top:30px;background:var(--deep);color:#fff;font-family:Poppins;font-weight:700;font-size:72px;padding:10px 44px;border-radius:24px;letter-spacing:2px}
+.years b{color:var(--gold)}
+.bar{width:200px;height:14px;border-radius:8px;background:var(--gold);margin:46px 0}
+.feats{display:flex;flex-direction:column;gap:28px}
+.feat{display:flex;align-items:center;gap:28px;background:#fff;border:3px solid var(--line);border-radius:30px;padding:22px 44px 22px 24px;width:max-content;font-family:Poppins;font-size:60px;font-weight:700;color:var(--deep);box-shadow:0 10px 30px rgba(42,27,71,.09)}
+.tick{width:82px;height:82px;border-radius:50%;background:var(--plum);color:#fff;display:grid;place-items:center;font-size:48px;font-weight:900;flex:none}
+/* laptop */
+.laptop{position:absolute;left:1400px;top:430px;width:1210px}
+.screen{background:#1b1726;border-radius:40px 40px 0 0;padding:26px;box-shadow:0 50px 110px rgba(42,27,71,.38)}
+.base{height:56px;background:linear-gradient(#e2dee8,#bbb3c6);border-radius:0 0 48px 48px;margin:0 -100px;position:relative}
+.base:after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:280px;height:18px;background:#a99fb6;border-radius:0 0 18px 18px}
+.app{background:#fff;border-radius:14px;overflow:hidden;height:820px;display:flex;flex-direction:column}
+.tb{height:66px;background:var(--plum);color:#fff;display:flex;align-items:center;gap:14px;padding:0 24px;font-family:Poppins;font-size:27px;font-weight:600}
+.tb i{width:16px;height:16px;border-radius:50%;background:rgba(255,255,255,.5)}
+.body{flex:1;display:flex;min-height:0}
+.secs{width:300px;background:#FAF8FD;border-right:2px solid var(--line);padding:14px 0}
+.secs div{padding:12px 22px;display:flex;gap:14px;align-items:center;font-size:25px;font-weight:700}
+.secs s{width:12px;height:30px;border-radius:4px;flex:none;text-decoration:none}
+.secs .on{background:var(--lilac);color:var(--plum)}
+.canvas{flex:1;padding:24px 26px;background:#FDFCFF}
+.hdr{background:linear-gradient(120deg,var(--plum),var(--plum2));color:#fff;border-radius:18px;padding:20px 26px;font-family:Poppins;font-size:36px;font-weight:700;letter-spacing:1px}
+.tiles{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:18px 0}
+.tile{border:2px solid var(--line);border-radius:16px;padding:14px 18px;background:#fff}
+.tile p{font-size:21px;font-weight:800;color:var(--muted);letter-spacing:1px}
+.tile h3{font-family:Poppins;font-size:34px;color:var(--plum);margin-top:2px}
+.h4{font-family:Poppins;font-size:27px;font-weight:700;color:var(--deep);margin:6px 0 12px}
+.areas{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.links{display:flex;gap:12px;margin-top:22px}.links span{background:var(--lilac);color:var(--plum);border-radius:12px;padding:12px 18px;font-size:23px;font-weight:800}
+.areas div{padding:18px 18px;border-radius:14px;font-size:25px;font-weight:800}
+/* phone */
+.phone{position:absolute;left:1110px;top:1150px;width:360px;height:575px;z-index:3;background:#1b1726;border-radius:58px;padding:18px;box-shadow:0 40px 90px rgba(42,27,71,.40)}
+.pscr{background:#FDFCFF;border-radius:44px;height:100%;overflow:hidden;padding:44px 18px 18px}
+.pscr .hdr{font-size:27px;padding:16px 18px;border-radius:14px}
+.chk{display:flex;gap:14px;align-items:center;background:#fff;border:2px solid var(--line);border-radius:16px;padding:18px 16px;margin-top:14px;font-size:25px;font-weight:800}
+.chk:before{content:"";width:30px;height:30px;border:3px solid #8a7fa0;border-radius:8px;flex:none}
+.chk.d:before{background:var(--plum);border-color:var(--plum)}.chk.d{color:#8b8497;text-decoration:line-through}
+/* minis */
+.minis{position:absolute;left:1530px;top:1450px;display:flex;gap:24px}
+.mini{background:#fff;border:3px solid var(--line);border-radius:26px;padding:22px 30px;font-family:Poppins;font-size:42px;font-weight:700;color:var(--deep);box-shadow:0 10px 30px rgba(42,27,71,.09);display:flex;align-items:center;gap:14px}
+.mini em{font-style:normal;font-size:44px}
+.sticker{z-index:5;position:absolute;right:90px;top:70px;width:300px;height:300px;border-radius:50%;background:var(--gold);color:var(--deep);display:grid;place-items:center;text-align:center;transform:rotate(10deg);box-shadow:0 20px 50px rgba(0,0,0,.18);border:10px solid #fff}
+.sticker b{font-family:Poppins;font-size:58px;line-height:.98;font-weight:900}.sticker small{font-family:Poppins;font-size:30px;font-weight:800;display:block;margin-top:8px}
+.strip{position:absolute;left:0;right:0;bottom:0;height:200px;background:var(--deep);display:flex;align-items:center;justify-content:center;gap:100px;color:#fff;font-size:58px;font-weight:700;font-family:Poppins}
+.strip span{display:flex;align-items:center;gap:24px}.strip i{width:26px;height:26px;border-radius:50%;background:var(--gold);display:inline-block}
+</style></head><body>
+<div id="thumb">
+  <div class="blob" style="width:1500px;height:1500px;background:var(--lilac);right:-420px;top:-360px"></div>
+  <div class="blob" style="width:620px;height:620px;background:#DCE8DA;left:-300px;bottom:-200px"></div>
+
+  <div class="left">
+    <div class="badge"><div class="on-ico">N</div>Microsoft OneNote</div>
+    <h1>OneNote<br><span>Planner PRO</span></h1>
+    <div class="years">2026 <b>–</b> 2027</div>
+    <div class="bar"></div>
+    <div class="feats">
+      <div class="feat"><div class="tick">✓</div>18-Month Planner</div>
+      <div class="feat"><div class="tick">✓</div>16 Life &amp; Work Areas</div>
+      <div class="feat"><div class="tick">✓</div>One-Click Navigation</div>
+      <div class="feat"><div class="tick">✓</div>Life + Business</div>
+    </div>
+  </div>
+
+  <div class="sticker"><div><b>ALL<br>IN ONE</b><small>Digital Planner</small></div></div>
+
+  <div class="laptop">
+    <div class="screen"><div class="app">
+      <div class="tb"><i></i><i></i><i></i>&nbsp;HEYFINORA Planner PRO</div>
+      <div class="body">
+        <div class="secs">
+          <div class="on"><s style="background:#5B3E8C"></s>Home</div>
+          <div><s style="background:#3F8FD2"></s>Plan 2026</div>
+          <div><s style="background:#3F8FD2"></s>Plan 2027</div>
+          <div><s style="background:#D2553F"></s>Tasks</div>
+          <div><s style="background:#3FA56B"></s>Goals</div>
+          <div><s style="background:#3FA56B"></s>Habits</div>
+          <div><s style="background:#9A5BC4"></s>Projects</div>
+          <div><s style="background:#2F7F86"></s>Work</div>
+          <div><s style="background:#C9A55A"></s>Money</div>
+          <div><s style="background:#D86C9A"></s>Journal</div>
+        </div>
+        <div class="canvas">
+          <div class="hdr">MASTER DASHBOARD</div>
+          <div class="tiles">
+            <div class="tile"><p>TODAY</p><h3>Thu 24</h3></div>
+            <div class="tile"><p>THIS WEEK</p><h3>Week 39</h3></div>
+            <div class="tile"><p>THIS MONTH</p><h3>Sept</h3></div>
+          </div>
+          <div class="h4">Life Areas</div>
+          <div class="areas">
+            <div style="background:#E6EEF9">💼 Work &amp; Career</div><div style="background:#F3E8FB">🚀 Business</div>
+            <div style="background:#E3F3E8">🌿 Health</div><div style="background:#FBF1DE">💰 Money</div>
+            <div style="background:#FBE5EC">❤️ Relationships</div><div style="background:#EFEAF7">📚 Growth</div>
+            <div style="background:#EAF0F0">🏡 Home</div><div style="background:#F6EFE6">🎈 Fun &amp; Rest</div>
+          </div>
+          <div class="links"><span>Inbox</span><span>Weekly Review</span><span>Goals</span><span>Budget</span></div>
+        </div>
+      </div>
+    </div></div>
+    <div class="base"></div>
+  </div>
+
+  <div class="phone"><div class="pscr">
+    <div class="hdr">TODAY'S TASKS</div>
+    <div class="chk d">Launch page</div>
+    <div class="chk">Q4 budget</div>
+    <div class="chk">3 workouts</div>
+    <div class="chk d">Read 20 pages</div>
+  </div></div>
+
+  <div class="minis"><div class="mini"><em>🔗</em>Hyperlinked</div><div class="mini"><em>🎨</em>Aesthetic</div><div class="mini"><em>✏️</em>Editable</div></div>
+
+  <div class="strip">
+    <span><i></i>Instant Download</span>
+    <span><i></i>Windows · Mac · iPad</span>
+    <span><i></i>Android · Web</span>
+  </div>
+</div>
+</body></html>
