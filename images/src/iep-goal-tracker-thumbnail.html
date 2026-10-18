@@ -1,0 +1,92 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800;900&family=Inter:wght@500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#13284B;--navy2:#1D3A66;--mint:#5ED6BE;--teal:#1FA38A;--orange:#F39A4B;--line:#E3E8EF;--muted:#5A6378}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#777;font-family:Inter,sans-serif;color:var(--navy)}
+#thumb{width:2000px;height:1500px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 75% 35%,#2A4C82 0%,#1A3460 40%,#0F2140 100%)}
+.glow{position:absolute;border-radius:50%;filter:blur(10px)}
+.left{position:absolute;left:80px;top:80px;width:860px}
+.tag{display:inline-block;background:var(--orange);color:var(--navy);font-family:Poppins;font-weight:800;font-size:40px;letter-spacing:4px;padding:10px 32px;border-radius:14px}
+h1{font-family:Poppins;font-weight:900;font-size:168px;line-height:.98;margin-top:26px;letter-spacing:-2px;color:#fff}
+h1 span{color:var(--mint)}
+.feats{margin-top:70px;display:flex;flex-direction:column;gap:48px}
+.f{display:flex;align-items:center;gap:24px;font-family:Poppins;font-weight:800;font-size:58px;color:#fff;line-height:1.05}
+.f em{font-style:normal;width:88px;height:88px;border-radius:50%;background:var(--teal);display:grid;place-items:center;font-size:44px;color:#fff;flex:none;box-shadow:0 0 0 6px rgba(94,214,190,.2)}
+.pills{position:absolute;left:80px;bottom:90px;display:flex;gap:22px;align-items:center}
+.pills span{font-family:Poppins;font-weight:800;font-size:50px;padding:14px 40px;border-radius:999px;letter-spacing:1px}
+.logo{position:absolute;right:70px;bottom:104px;font-family:Poppins;font-weight:800;font-size:56px;color:#fff}.logo b{color:var(--mint)}
+/* laptop */
+.laptop{position:absolute;left:930px;top:270px;width:1040px;z-index:2}
+.screen{background:#0b0f17;border-radius:30px 30px 0 0;padding:18px;box-shadow:0 40px 90px rgba(0,0,0,.45)}
+.base{height:38px;background:linear-gradient(#e1e4ea,#aeb5c2);border-radius:0 0 34px 34px;margin:0 -24px;position:relative}
+.base:after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:200px;height:12px;background:#9da5b3;border-radius:0 0 12px 12px}
+.app{background:#F5F7FB;border-radius:10px;height:870px;overflow:hidden}
+.ah{background:var(--navy);color:#fff;font-family:Poppins;font-weight:800;font-size:34px;padding:18px 26px}
+.ah b{color:var(--mint)}
+.kp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:18px}
+.k{border-radius:16px;padding:14px 18px;text-align:center}
+.k p{font-size:21px;font-weight:800;letter-spacing:1px;color:var(--muted)}.k h3{font-family:Poppins;font-size:72px;line-height:1.05}
+.c{background:#fff;border:2px solid var(--line);border-radius:16px;margin:0 18px 14px;padding:16px 22px}
+.c h4{font-family:Poppins;font-weight:800;font-size:28px;margin-bottom:10px;color:var(--navy)}
+.pr{display:flex;align-items:center;gap:16px;font-size:27px;font-weight:700;margin:14px 0}
+.pr>span:first-child{width:122px;flex:none}.pr .bar{flex:1;height:24px;border-radius:12px;background:#E8EDF3;overflow:hidden}.pr .bar i{display:block;height:100%;border-radius:12px}
+.pr b{width:66px;text-align:right;flex:none}
+.ch{display:inline-block;padding:6px 10px;border-radius:999px;font-size:21px;font-weight:800;white-space:nowrap;width:180px;text-align:center;flex:none}
+.ok{background:#D9F4EC;color:#127A64}.ms{background:#DCEBFF;color:#2457B5}.ns{background:#FDE3D0;color:#B4561A}
+.dl{display:flex;align-items:center;gap:14px;font-size:27px;font-weight:700;padding:12px 0;border-bottom:2px solid var(--line)}
+.dl:last-child{border:0}.dl em{font-style:normal}.dl .ch{margin-left:auto}
+/* page behind */
+.sheet{position:absolute;left:1180px;top:140px;width:560px;height:300px;background:#fff;border-radius:10px;transform:rotate(-5deg);box-shadow:0 20px 50px rgba(0,0,0,.35);padding:22px 26px;z-index:1}
+.sheet h5{font-family:Poppins;font-size:28px;color:var(--navy)}
+.sheet div{height:16px;border-radius:8px;background:#E8EDF3;margin-top:16px}
+.demo{position:absolute;right:40px;top:40px;width:250px;height:250px;border-radius:50%;background:var(--orange);border:8px solid #fff;display:grid;place-items:center;text-align:center;color:#fff;font-family:Poppins;transform:rotate(10deg);box-shadow:0 18px 40px rgba(0,0,0,.35);z-index:3}
+.demo b{font-size:44px;font-weight:900;line-height:1;display:block}.demo small{font-size:28px;font-weight:700;display:block;margin-top:4px}
+</style></head><body>
+<div id="thumb">
+  <div class="glow" style="width:700px;height:700px;right:-120px;top:280px;background:rgba(94,214,190,.08)"></div>
+  <div class="left">
+    <div class="tag">SPECIAL EDUCATION</div>
+    <h1>IEP GOAL<br><span>TRACKER</span></h1>
+    <div class="feats">
+      <div class="f"><em>✓</em>Auto Progress &amp; Status</div>
+      <div class="f"><em>✓</em>IEP Deadline Alerts</div>
+      <div class="f"><em>✓</em>Progress Reports<br>&amp; Charts</div>
+    </div>
+  </div>
+
+  <div class="sheet"><h5>IEP Progress Report</h5><div style="width:90%"></div><div style="width:70%"></div><div style="width:82%"></div><div style="width:60%"></div></div>
+  <div class="demo"><div><b>DEMO<br>+ BLANK</b><small>Files</small></div></div>
+
+  <div class="laptop">
+    <div class="screen"><div class="app">
+      <div class="ah">IEP Goal Tracker <b>|</b> Dashboard</div>
+      <div class="kp">
+        <div class="k" style="background:#DDF5EE"><p>AVG PROGRESS</p><h3 style="color:var(--teal)">52%</h3></div>
+        <div class="k" style="background:#E2ECFB"><p>STUDENTS</p><h3 style="color:#2457B5">8</h3></div>
+        <div class="k" style="background:#FDE6D5"><p>ALERTS</p><h3 style="color:#D06A1F">4</h3></div>
+      </div>
+      <div class="c"><h4>Goal Progress</h4>
+        <div class="pr"><span>Reading</span><div class="bar"><i style="width:78%;background:var(--teal)"></i></div><b>78%</b><span class="ch ok">On Track</span></div>
+        <div class="pr"><span>Math</span><div class="bar"><i style="width:92%;background:#3E7BE0"></i></div><b>92%</b><span class="ch ms">Mastered</span></div>
+        <div class="pr"><span>Writing</span><div class="bar"><i style="width:35%;background:var(--orange)"></i></div><b>35%</b><span class="ch ns">Needs Support</span></div>
+        <div class="pr"><span>Behavior</span><div class="bar"><i style="width:64%;background:var(--teal)"></i></div><b>64%</b><span class="ch ok">On Track</span></div>
+      </div>
+      <div class="c"><h4>Upcoming Deadlines</h4>
+        <div class="dl"><em>⚠️</em>Annual Review – Student A<span class="ch ns">5 days</span></div>
+        <div class="dl"><em>📅</em>Progress Report – Student B<span class="ch ms">12 days</span></div>
+        <div class="dl"><em>👥</em>IEP Meeting – Student C<span class="ch ok">21 days</span></div>
+      </div>
+    </div></div>
+    <div class="base"></div>
+  </div>
+
+  <div class="pills">
+    <span style="background:var(--teal);color:#fff">EXCEL</span>
+    <span style="background:#fff;color:var(--navy)">GOOGLE SHEETS</span>
+    <span style="background:var(--orange);color:var(--navy)">+ PRINTABLE PDF</span>
+  </div>
+  <div class="logo">Hey<b>Finora</b></div>
+</div>
+</body></html>
