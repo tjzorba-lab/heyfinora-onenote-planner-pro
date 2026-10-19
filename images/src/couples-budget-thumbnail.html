@@ -1,0 +1,114 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Poppins:wght@500;600;700;800;900&family=Inter:wght@600;700;800;900&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#0F1E3D;--navy2:#1A3264;--blue:#2F6FED;--gold:#E2B24A;--gold2:#F6D88A;--line:#E5E9F1;--muted:#5D6A82;--green:#17A05D;--red:#E5484D;--pink:#F07C8C}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:#777;font-family:Poppins,sans-serif;color:var(--navy)}
+#thumb{width:2000px;height:1500px;position:relative;overflow:hidden;background:radial-gradient(ellipse at 50% 40%,#22407A 0%,#14295A 45%,#0A1630 100%)}
+.top{position:absolute;left:0;right:0;top:34px;text-align:center}
+.brand{display:inline-flex;align-items:center;gap:24px;font-weight:700;font-size:34px;letter-spacing:14px;color:var(--gold2)}
+.brand:before,.brand:after{content:"";width:110px;height:3px;background:var(--gold)}
+h1{font-family:Anton,sans-serif;font-weight:400;font-size:190px;line-height:1;color:#fff;letter-spacing:2px;margin-top:6px}
+h1 span{background:linear-gradient(180deg,#FBE3A0,#D9A238);-webkit-background-clip:text;color:transparent}
+.tag{display:inline-block;margin-top:14px;background:var(--blue);color:#fff;font-weight:800;font-size:46px;padding:10px 54px;border-radius:999px;box-shadow:0 12px 30px rgba(47,111,237,.45)}
+/* features */
+.feats{position:absolute;left:30px;top:470px;width:440px;display:flex;flex-direction:column;gap:16px}
+.f{display:flex;align-items:center;gap:18px;background:#fff;border-radius:22px;padding:14px 18px;height:128px;box-shadow:0 10px 26px rgba(0,0,0,.25);font-weight:800;font-size:34px;line-height:1.08}
+.f em{font-style:normal;width:90px;height:90px;border-radius:50%;background:var(--navy);display:grid;place-items:center;font-size:46px;flex:none;border:4px solid var(--gold)}
+.side{position:absolute;right:30px;top:690px;width:400px;display:flex;flex-direction:column;gap:16px}
+.s{display:flex;align-items:center;gap:16px;background:#fff;border-radius:22px;padding:14px 18px;height:128px;box-shadow:0 10px 26px rgba(0,0,0,.25);font-weight:800;font-size:34px;line-height:1.08}
+.s em{font-style:normal;width:84px;height:84px;border-radius:18px;display:grid;place-items:center;font-size:44px;flex:none;color:#fff;font-family:Inter;font-weight:900}
+.badge{position:absolute;right:50px;top:400px;width:270px;height:270px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#FFF0BE,#E6B44C 55%,#B07C1C);border:8px solid #fff;display:grid;place-items:center;text-align:center;color:var(--navy);box-shadow:0 18px 40px rgba(0,0,0,.4);z-index:5}
+.badge b{font-family:Anton;font-weight:400;font-size:120px;line-height:.9;display:block}.badge span{font-family:Anton;font-size:50px;display:block;letter-spacing:2px}
+/* laptop */
+.laptop{position:absolute;left:490px;top:470px;width:1080px;z-index:2}
+.screen{background:#0b0f17;border-radius:30px 30px 0 0;padding:18px;box-shadow:0 40px 90px rgba(0,0,0,.55)}
+.base{height:36px;background:linear-gradient(#e1e4ea,#aeb5c2);border-radius:0 0 30px 30px;margin:0 -30px;position:relative}
+.base:after{content:"";position:absolute;left:50%;top:0;transform:translateX(-50%);width:200px;height:12px;background:#9da5b3;border-radius:0 0 12px 12px}
+.app{background:#F4F7FC;border-radius:10px;height:780px;overflow:hidden}
+.ah{background:var(--navy);color:#fff;padding:16px 24px 0}
+.ah h3{font-weight:800;font-size:34px}.ah h3 small{font-weight:700;font-size:18px;letter-spacing:6px;color:var(--gold2);display:block}
+.tabs{display:flex;gap:6px;margin-top:10px}.tabs span{font-size:19px;font-weight:700;padding:8px 14px;color:#C9D4EA;border-radius:8px 8px 0 0}.tabs .on{background:#F4F7FC;color:var(--navy)}
+.kp{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;padding:16px}
+.k{background:#fff;border:2px solid var(--line);border-radius:14px;padding:12px 16px}
+.k p{font-size:19px;font-weight:700;color:var(--muted)}.k h4{font-family:Inter;font-weight:900;font-size:44px;line-height:1.1}
+.row{display:grid;grid-template-columns:1.15fr 1fr;gap:12px;padding:0 16px}
+.c{background:#fff;border:2px solid var(--line);border-radius:14px;padding:14px 18px}
+.c h5{font-weight:800;font-size:24px;margin-bottom:8px}
+.bars{display:flex;align-items:flex-end;gap:18px;height:215px;border-bottom:2px solid var(--line);padding:0 8px}
+.bars div{flex:1;display:flex;gap:5px;align-items:flex-end;height:100%}.bars i{flex:1;border-radius:6px 6px 0 0;display:block}
+.ml{display:flex;gap:18px;padding:6px 8px 0;font-size:18px;font-weight:700;color:var(--muted)}.ml span{flex:1;text-align:center}
+.dw{display:flex;align-items:center;gap:18px}
+.donut{width:230px;height:230px;border-radius:50%;background:conic-gradient(var(--blue) 0 35%,var(--pink) 0 53%,var(--gold) 0 65%,#7FB3F5 0 75%,#8B6FE0 0 90%,#B8BFCC 0);display:grid;place-items:center;flex:none}
+.donut div{width:136px;height:136px;border-radius:50%;background:#fff;display:grid;place-items:center;font-family:Inter;font-weight:900;font-size:28px}
+.lg div{display:flex;align-items:center;gap:8px;font-size:20px;font-weight:700;margin:5px 0}.lg i{width:14px;height:14px;border-radius:4px;display:inline-block}.lg b{margin-left:auto;padding-left:14px}
+.goals{display:grid;grid-template-columns:1fr 1fr;gap:12px;padding:14px 16px}
+.g{background:#fff;border:2px solid var(--line);border-radius:14px;padding:16px 18px;display:flex;gap:16px;align-items:center}
+.g em{font-style:normal;font-size:56px}
+.g div{flex:1}.g h6{font-size:23px;font-weight:800}.g p{font-size:20px;font-weight:700;color:var(--muted)}
+.pb{height:16px;border-radius:8px;background:#E8EDF5;margin-top:8px;overflow:hidden}.pb i{display:block;height:100%;border-radius:8px}
+.bottom{position:absolute;left:0;right:0;bottom:44px;display:flex;justify-content:center;z-index:6}
+.bottom span{background:linear-gradient(135deg,var(--gold2),var(--gold));color:var(--navy);font-family:Anton;font-size:74px;letter-spacing:3px;padding:6px 70px;border-radius:999px;box-shadow:0 14px 30px rgba(0,0,0,.4)}
+</style></head><body>
+<div id="thumb">
+  <div class="top">
+    <div class="brand">HEYFINORA</div>
+    <h1>COUPLES BUDGET <span>PRO</span></h1>
+    <div class="tag">Plan Money Together. Build Better Habits.</div>
+  </div>
+
+  <div class="feats">
+    <div class="f"><em>👫</em>Shared &amp;<br>Individual Finances</div>
+    <div class="f"><em>⚖️</em>Fair Expense<br>Splitting</div>
+    <div class="f"><em>🧾</em>Bills &amp;<br>Debt Tracking</div>
+    <div class="f"><em>🐷</em>Savings Goals</div>
+    <div class="f"><em>📊</em>Monthly &amp; Yearly<br>Analytics</div>
+  </div>
+
+  <div class="badge"><div><b>16</b><span>SHEETS</span></div></div>
+  <div class="side">
+    <div class="s"><em style="background:#107C41">X</em>Excel &amp;<br>Google Sheets</div>
+    <div class="s"><em style="background:var(--blue)">📄</em>Demo Data<br>Included</div>
+    <div class="s"><em style="background:var(--navy)">📘</em>Quick-Start<br>PDF Guide</div>
+  </div>
+
+  <div class="laptop">
+    <div class="screen"><div class="app">
+      <div class="ah"><h3><small>HEYFINORA</small>Couples Budget Pro</h3>
+        <div class="tabs"><span class="on">Dashboard</span><span>Income</span><span>Expenses</span><span>Bills</span><span>Savings</span><span>Debt</span><span>Settlement</span></div></div>
+      <div class="kp">
+        <div class="k"><p>Total Income</p><h4 style="color:var(--green)">$6,350</h4></div>
+        <div class="k"><p>Total Expenses</p><h4 style="color:var(--red)">$2,275</h4></div>
+        <div class="k"><p>Total Savings</p><h4 style="color:var(--blue)">$1,800</h4></div>
+        <div class="k"><p>Net Amount</p><h4 style="color:#C8901E">$4,075</h4></div>
+      </div>
+      <div class="row">
+        <div class="c"><h5>Income vs Expenses</h5>
+          <div class="bars">
+            <div><i style="height:80%;background:var(--blue)"></i><i style="height:42%;background:var(--pink)"></i></div>
+            <div><i style="height:82%;background:var(--blue)"></i><i style="height:48%;background:var(--pink)"></i></div>
+            <div><i style="height:86%;background:var(--blue)"></i><i style="height:52%;background:var(--pink)"></i></div>
+            <div><i style="height:80%;background:var(--blue)"></i><i style="height:52%;background:var(--pink)"></i></div>
+            <div><i style="height:88%;background:var(--blue)"></i><i style="height:54%;background:var(--pink)"></i></div>
+            <div><i style="height:86%;background:var(--blue)"></i><i style="height:53%;background:var(--pink)"></i></div>
+          </div>
+          <div class="ml"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span></div>
+        </div>
+        <div class="c"><h5>Expense Breakdown</h5>
+          <div class="dw"><div class="donut"><div>$2,275</div></div>
+            <div class="lg"><div><i style="background:var(--blue)"></i>Housing<b>35%</b></div><div><i style="background:var(--pink)"></i>Food<b>18%</b></div><div><i style="background:var(--gold)"></i>Transport<b>12%</b></div><div><i style="background:#7FB3F5"></i>Utilities<b>10%</b></div><div><i style="background:#8B6FE0"></i>Lifestyle<b>15%</b></div><div><i style="background:#B8BFCC"></i>Other<b>10%</b></div></div>
+          </div>
+        </div>
+      </div>
+      <div class="goals">
+        <div class="g"><em>🏡</em><div><h6>House Down Payment</h6><p>$7,200 / $12,000 · 60%</p><div class="pb"><i style="width:60%;background:var(--green)"></i></div></div></div>
+        <div class="g"><em>🚗</em><div><h6>Car Loan Payoff</h6><p>$5,300 / $12,000 · 44%</p><div class="pb"><i style="width:44%;background:var(--red)"></i></div></div></div>
+      </div>
+    </div></div>
+    <div class="base"></div>
+  </div>
+
+  <div class="bottom"><span>PERFECT FOR COUPLES ♡</span></div>
+</div>
+</body></html>
